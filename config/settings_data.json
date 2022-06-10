@@ -1,0 +1,4128 @@
+{
+  "presets": {
+    "Chantilly": {
+      "use_fullwidth_layout": false,
+      "font_col_base": "#787a7c",
+      "font_col_link": "#c16452",
+      "font_col_link_hover": "#964233",
+      "font_col_heads": "#171717",
+      "font_col_shoptitle": "#171717",
+      "font_col_sale": "#e53d3d",
+      "btn_col": "#212b36",
+      "btn_col_alt": "#c16452",
+      "btn_col_txt": "#ffffff",
+      "btn_alt_bg": "#ffffff",
+      "btn_alt_txt": "#212b36",
+      "bg_col": "#ffffff",
+      "bg_image": "",
+      "bg_method": "repeatxy",
+      "head_bg_col": "#ffffff",
+      "head_txt_col": "#171717",
+      "head_nav_div_col": "#dfe3e8",
+      "font_col_nav": "#787a7c",
+      "font_col_nav_hov": "#c16452",
+      "panel_nav_bg": "#ffffff",
+      "nav_featured_col": "#b61d0f",
+      "not_shade_bg": "#f4f6f8",
+      "head_not_col_bg": "#f4f6f8",
+      "head_not_col_txt1": "#171717",
+      "head_not_col_txt2": "#e29384",
+      "image_overlay_text": "#ffffff",
+      "image_overlay_bg": "#000000",
+      "image_overlay_opacity": 12,
+      "alt_bg_col": "#f7f1f0",
+      "alt_bg_text_col": "#343434",
+      "prod_thumb_detail_bg": "#f7f1f0",
+      "prod_thumb_detail_col": "#171717",
+      "prod_thumb_detail_col_a": "#c16452",
+      "prod_over_redu_bg": "#c20000",
+      "prod_over_low_bg": "#09728c",
+      "prod_over_new_text": "#ffffff",
+      "prod_over_new_bg": "#de9d9a",
+      "prod_label_sale_text": "#c20000",
+      "prod_label_sold_text": "#171717",
+      "prod_label_pre_text": "#3ea36a",
+      "cross_page_promo_bg": "#f7f1f0",
+      "cross_page_promo_color": "#171717",
+      "foot_bg_col": "#f4dfdb",
+      "foot_text_col": "#676869",
+      "foot_heading_col": "#171717",
+      "foot_divider_col": "#ecd6d1",
+      "type_heading_font": "serif",
+      "capitalize_headings": false,
+      "type_base_font": "futura_n4",
+      "type_nav_font": "futura_n5",
+      "type_logo_font": "futura_n4",
+      "font_size_heading_int": 32,
+      "font_size_base_int": 15,
+      "font_size_nav_int": 14,
+      "font_size_logo_int": 24,
+      "button_style": "caps",
+      "coll_grid_image_shape": "portrait-45",
+      "coll_grid_image_position": "center center",
+      "coll_grid_show_count": true,
+      "prod_thumb_shape": "portrait-23",
+      "prod_thumb_hover_image": true,
+      "prod_thumb_options_names": "Color, Size",
+      "quickbuy_style": "button",
+      "qb_show_description": true,
+      "enable_payment_button": true,
+      "prod_block_label_loc": "top left",
+      "prod_stock_warn_show": true,
+      "prod_stock_warn_limit_int": 5,
+      "prod_sale_show": true,
+      "prod_sold_out_show": true,
+      "variant_style": "listed",
+      "swatch_enabled": true,
+      "swatch_option_name": "Color",
+      "swatch_images": true,
+      "search_type": "product,article,page",
+      "enable_live_search": true,
+      "live_search_show_vendor": false,
+      "live_search_show_price": false,
+      "live_search_search_meta": false,
+      "cart_type": "drawer",
+      "sections": {
+        "header": {
+          "type": "header",
+          "settings": {
+            "logo_img_width_int": 160,
+            "enable_sticky": true,
+            "menu_layout": "inline-menu-left"
+          }
+        },
+        "cross-page-promos": {
+          "type": "cross-page-promos",
+          "blocks": {
+            "1478526632862": {
+              "type": "icon",
+              "settings": {
+                "icon": "delivery",
+                "text": "Free shipping"
+              }
+            },
+            "1478526645605": {
+              "type": "icon",
+              "settings": {
+                "icon": "label",
+                "text": "New styles"
+              }
+            },
+            "1478526647261": {
+              "type": "icon",
+              "settings": {
+                "icon": "gift",
+                "text": "Gift cards"
+              }
+            },
+            "1478527611164": {
+              "type": "icon",
+              "settings": {
+                "icon": "star",
+                "text": "5.0 Trustpilot rating"
+              }
+            }
+          },
+          "block_order": [
+            "1478526632862",
+            "1478526645605",
+            "1478526647261",
+            "1478527611164"
+          ],
+          "settings": {
+            "visibility": "all"
+          }
+        },
+        "1480591889144": {
+          "type": "featured-collection",
+          "settings": {
+            "show_vendor": false,
+            "enable_carousel": true,
+            "grid": 4,
+            "rows": 1,
+            "use_alt_bg": true,
+            "show_view_all": true,
+            "full_width": false
+          }
+        },
+        "1521034575223": {
+          "type": "image-with-text",
+          "settings": {
+            "image_width": 640,
+            "button_style": "secondary",
+            "image_position": "right",
+            "text_alignment": "left",
+            "use_alt_bg": false
+          }
+        },
+        "1521035976582": {
+          "type": "image-with-text",
+          "settings": {
+            "image_width": 700,
+            "button_style": "secondary",
+            "image_position": "left",
+            "text_alignment": "left",
+            "use_alt_bg": false
+          }
+        },
+        "footer": {
+          "type": "footer",
+          "blocks": {
+            "1601374680247": {
+              "type": "text",
+              "settings": {
+                "image_width": 150,
+                "show_social_icons": true,
+                "soc_icons_large": false
+              }
+            },
+            "1601374650582": {
+              "type": "menu",
+              "settings": {
+                "menu": "footer"
+              }
+            },
+            "1601374580731": {
+              "type": "newsletter",
+              "settings": {
+                "show_social_icons": true,
+                "soc_icons_large": false
+              }
+            }
+          },
+          "block_order": [
+            "1601374680247",
+            "1601374650582",
+            "1601374580731"
+          ],
+          "settings": {
+            "show_payment_icons": true,
+            "show_locale_selector": true,
+            "show_currency_selector": true
+          }
+        },
+        "collection-template": {
+          "type": "collection-template",
+          "settings": {
+            "show_image_behind_heading": true,
+            "heading_image_height": "large",
+            "coll_num_per_page_int": 24,
+            "grid": 3,
+            "show_vendor": false,
+            "coll_desc_pos": "above",
+            "ajax_products": true,
+            "coll_show_sort": true,
+            "coll_show_feat": false,
+            "tag_filtering": "tag_groups",
+            "collapse_tag_sidebar_by_default": false,
+            "subcoll_style": "gallery",
+            "subcoll_gall_shape": "l-21",
+            "image_position": "center center",
+            "subcoll_gall_enable_margin": true,
+            "subcoll_gall_full_width": false,
+            "subcoll_gall_overlay_style": "full",
+            "subcoll_gall_text_alignment": "bottom left",
+            "subcoll_gall_mobile_layout": "2"
+          }
+        },
+        "product-template": {
+          "type": "product-template",
+          "settings": {
+            "show_tax_and_shipping": false,
+            "show_vendor": true,
+            "show_sku": false,
+            "show_quantity_selector": true,
+            "enable_payment_button": true,
+            "show_pickup_availability": true,
+            "show_backorder_text": true,
+            "show_inventory_notice": false,
+            "inventory_notice_threshold": 10,
+            "inventory_transfers_enable": true,
+            "show_sharing_links": true,
+            "gallery_size": "medium",
+            "prod_gall_thumbs_under": "under",
+            "enable_zoom": true,
+            "enable_video_looping": false,
+            "description_location": "beside"
+          }
+        },
+        "product-recommendations": {
+          "type": "product-recommendations",
+          "settings": {
+            "show_product_recommendations": true,
+            "show_vendor": false,
+            "grid": 4
+          }
+        },
+        "page-story-template": {
+          "type": "page-story-template",
+          "blocks": {
+            "1594910075303": {
+              "type": "image-with-text-overlay",
+              "settings": {
+                "image_position": "center center",
+                "height": "adapt",
+                "height_desktop": 600,
+                "height_mobile": 500,
+                "title_size": 54,
+                "enlarge_text": true,
+                "text_alignment": "center center",
+                "full_width": false,
+                "mobile_overlay_under": false,
+                "overlay_style": "box"
+              }
+            },
+            "1594910315975": {
+              "type": "rich-text",
+              "settings": {
+                "button_style": "primary",
+                "height": "medium",
+                "text_alignment": "center",
+                "enlarge_text": false,
+                "full_width": false,
+                "use_alt_bg": false
+              }
+            },
+            "1594911200272": {
+              "type": "image-with-text",
+              "settings": {
+                "image_width": 700,
+                "button_style": "primary",
+                "image_position": "right",
+                "text_alignment": "center",
+                "use_alt_bg": false
+              }
+            },
+            "1594911344727": {
+              "type": "image-with-text",
+              "settings": {
+                "image_width": 700,
+                "button_style": "primary",
+                "image_position": "left",
+                "text_alignment": "left",
+                "use_alt_bg": false
+              }
+            },
+            "1594910353145": {
+              "type": "rich-text",
+              "settings": {
+                "button_style": "primary",
+                "height": "medium",
+                "text_alignment": "center",
+                "enlarge_text": true,
+                "full_width": false,
+                "use_alt_bg": false
+              }
+            },
+            "1594910439848": {
+              "type": "image-with-text-overlay",
+              "settings": {
+                "image_position": "center center",
+                "height": "adapt",
+                "height_desktop": 600,
+                "height_mobile": 500,
+                "title_size": 60,
+                "enlarge_text": true,
+                "text_alignment": "center center",
+                "full_width": false,
+                "mobile_overlay_under": false,
+                "overlay_style": "full"
+              }
+            }
+          },
+          "block_order": [
+            "1594910075303",
+            "1594910315975",
+            "1594911200272",
+            "1594911344727",
+            "1594910353145",
+            "1594910439848"
+          ],
+          "settings": {
+            "show_page_content": false
+          }
+        },
+        "announcement-bar": {
+          "type": "announcement-bar",
+          "settings": {
+            "announcement_show": true,
+            "announcement_bar_col": "#f7f1f0",
+            "announcement_text_col": "#212121",
+            "show_social_icons": true,
+            "show_locale_selector": true,
+            "show_currency_selector": true
+          }
+        },
+        "store-messages": {
+          "type": "store-messages",
+          "settings": {
+            "head_not_home_only": false,
+            "head_not_mob_show": false
+          }
+        },
+        "popup": {
+          "type": "popup",
+          "settings": {
+            "mode": "enabled",
+            "popup_delay_seconds": 6,
+            "popup_dismiss_for_days": 2,
+            "position": "center",
+            "show_newsletter": true,
+            "show_social_icons": true
+          }
+        },
+        "16117511238528a364": {
+          "type": "testimonials",
+          "blocks": {
+            "16117511238528a364-0": {
+              "type": "testimonial",
+              "settings": {
+                "star_rating": 5
+              }
+            },
+            "16117511238528a364-1": {
+              "type": "testimonial",
+              "settings": {
+                "star_rating": 5
+              }
+            }
+          },
+          "block_order": [
+            "16117511238528a364-0",
+            "16117511238528a364-1"
+          ],
+          "settings": {
+            "layout": "image-right",
+            "image_shape": "landscape",
+            "use_alt_bg": true
+          }
+        },
+        "blog-template": {
+          "type": "blog-template",
+          "settings": {
+            "layout": "columns",
+            "show_date": true,
+            "show_author": true,
+            "show_article_tags": true,
+            "show_sharing_icons": true,
+            "show_rss_icon": true,
+            "crop_image": true,
+            "crop_style": "16-9"
+          }
+        },
+        "article-template": {
+          "type": "article-template",
+          "settings": {
+            "show_featured_image": true,
+            "show_date": true,
+            "show_author": true,
+            "show_article_tags": true,
+            "show_sharing_icons": true
+          }
+        },
+        "16172860000b0cd55f": {
+          "type": "slideshow",
+          "blocks": {
+            "cdc6b122-75ae-40ee-8067-7774074e2ccb": {
+              "type": "image",
+              "settings": {
+                "title_size": 74,
+                "enlarge_text": true,
+                "text_alignment": "bottom left"
+              }
+            },
+            "16172860000b0cd55f-0": {
+              "type": "image",
+              "settings": {
+                "title_size": 74,
+                "enlarge_text": true,
+                "text_alignment": "bottom left"
+              }
+            },
+            "16172860000b0cd55f-1": {
+              "type": "image",
+              "settings": {
+                "title_size": 74,
+                "enlarge_text": true,
+                "text_alignment": "bottom left"
+              }
+            }
+          },
+          "block_order": [
+            "cdc6b122-75ae-40ee-8067-7774074e2ccb",
+            "16172860000b0cd55f-0",
+            "16172860000b0cd55f-1"
+          ],
+          "settings": {
+            "height": "fixed",
+            "height_desktop": 800,
+            "height_mobile": 500,
+            "full_width": true,
+            "mobile_overlay_under": false,
+            "overlay_style": "full",
+            "slide_transition": "fade",
+            "slide_navigation": "arrows",
+            "autoplay": true,
+            "autoplay_speed": 7
+          }
+        },
+        "1617287715bc7ff3c2": {
+          "type": "rich-text",
+          "settings": {
+            "button_style": "primary",
+            "height": "small",
+            "text_alignment": "center",
+            "enlarge_text": true,
+            "full_width": false,
+            "use_alt_bg": false
+          }
+        },
+        "1617291721c3d3e73d": {
+          "type": "background-video",
+          "settings": {
+            "title_size": 56,
+            "enlarge_text": true,
+            "text_alignment": "center center",
+            "height_desktop": 720,
+            "height_mobile": 500,
+            "full_width": true,
+            "overlay_style": "full"
+          }
+        },
+        "1617292342c63ff855": {
+          "type": "text-columns-with-images",
+          "blocks": {
+            "1617292342c63ff855-1": {
+              "type": "text_block",
+              "settings": {
+                "image_width": 700
+              }
+            },
+            "1617292342c63ff855-0": {
+              "type": "text_block",
+              "settings": {
+                "image_width": 700
+              }
+            },
+            "b1086ec6-bafc-4093-9ed5-2e8e87ac77ac": {
+              "type": "text_block",
+              "settings": {
+                "image_width": 700
+              }
+            }
+          },
+          "block_order": [
+            "1617292342c63ff855-1",
+            "1617292342c63ff855-0",
+            "b1086ec6-bafc-4093-9ed5-2e8e87ac77ac"
+          ],
+          "settings": {
+            "title": "",
+            "text_alignment": "center",
+            "button_style": "primary",
+            "use_alt_bg": false
+          }
+        },
+        "1617293273c37b524b": {
+          "type": "rich-text",
+          "settings": {
+            "button_style": "primary",
+            "height": "medium",
+            "text_alignment": "center",
+            "enlarge_text": false,
+            "full_width": false,
+            "use_alt_bg": true
+          }
+        },
+        "1617297526d84ec27b": {
+          "type": "gallery",
+          "blocks": {
+            "1617297526d84ec27b-0": {
+              "type": "image",
+              "settings": {
+                "alignment": "center center",
+                "enlarge_image": false,
+                "text_alignment": "center center"
+              }
+            },
+            "5d30df20-9eb1-4e8d-b322-607a2d5ab579": {
+              "type": "image",
+              "settings": {
+                "alignment": "center center",
+                "enlarge_image": false,
+                "text_alignment": "center center"
+              }
+            },
+            "1617297526d84ec27b-1": {
+              "type": "image",
+              "settings": {
+                "alignment": "center center",
+                "enlarge_image": false,
+                "text_alignment": "center center"
+              }
+            },
+            "1617297526d84ec27b-2": {
+              "type": "image",
+              "settings": {
+                "alignment": "center center",
+                "enlarge_image": false,
+                "text_alignment": "center center"
+              }
+            }
+          },
+          "block_order": [
+            "1617297526d84ec27b-0",
+            "5d30df20-9eb1-4e8d-b322-607a2d5ab579",
+            "1617297526d84ec27b-1",
+            "1617297526d84ec27b-2"
+          ],
+          "settings": {
+            "grid": 4,
+            "desktop_image_height": 300,
+            "mobile_image_height": 400,
+            "enable_margin": false,
+            "full_width": true,
+            "use_alt_bg": false,
+            "enable_carousel": true,
+            "overlay_style": "full",
+            "button_style": "primary"
+          }
+        },
+        "1619015739944f86f6": {
+          "type": "gallery",
+          "blocks": {
+            "1619015739944f86f6-0": {
+              "type": "image",
+              "settings": {
+                "text_alignment": "center center"
+              }
+            },
+            "1619015739944f86f6-1": {
+              "type": "image",
+              "settings": {
+                "text_alignment": "center center"
+              }
+            },
+            "1619015739944f86f6-2": {
+              "type": "image",
+              "settings": {
+                "text_alignment": "center center"
+              }
+            },
+            "07a9021d-3e67-4f2a-a7dd-84903c7fe860": {
+              "type": "image",
+              "settings": {
+                "text_alignment": "center center"
+              }
+            }
+          },
+          "block_order": [
+            "1619015739944f86f6-0",
+            "1619015739944f86f6-1",
+            "1619015739944f86f6-2",
+            "07a9021d-3e67-4f2a-a7dd-84903c7fe860"
+          ],
+          "settings": {
+            "grid": 4,
+            "desktop_image_height": 500,
+            "mobile_image_height": 400,
+            "enable_margin": true,
+            "full_width": false,
+            "use_alt_bg": false,
+            "enable_carousel": true,
+            "overlay_style": "full",
+            "button_style": "secondary"
+          }
+        },
+        "16190803309fbfa316": {
+          "type": "logo-list",
+          "blocks": {
+            "59f32612-bd0d-4a8a-af82-f82bdb45132a": {
+              "type": "logo",
+              "settings": {
+                "image_width": 280
+              }
+            },
+            "65b67cd1-0661-4969-a2e0-26487ed80c19": {
+              "type": "logo",
+              "settings": {
+                "image_width": 280
+              }
+            },
+            "83c5d02d-8485-466a-b6a7-6898a3eabe05": {
+              "type": "logo",
+              "settings": {
+                "image_width": 280
+              }
+            }
+          },
+          "block_order": [
+            "59f32612-bd0d-4a8a-af82-f82bdb45132a",
+            "65b67cd1-0661-4969-a2e0-26487ed80c19",
+            "83c5d02d-8485-466a-b6a7-6898a3eabe05"
+          ],
+          "settings": {
+            "image_opacity": 100,
+            "use_alt_bg": false
+          }
+        }
+      },
+      "content_for_index": [
+        "16172860000b0cd55f",
+        "1617287715bc7ff3c2",
+        "1619015739944f86f6",
+        "1480591889144",
+        "1521035976582",
+        "16117511238528a364",
+        "1617292342c63ff855",
+        "1617291721c3d3e73d",
+        "1521034575223",
+        "1617293273c37b524b",
+        "16190803309fbfa316",
+        "1617297526d84ec27b"
+      ]
+    },
+    "Salt Yard": {
+      "use_fullwidth_layout": true,
+      "font_col_base": "#808284",
+      "font_col_link": "#171717",
+      "font_col_link_hover": "#171717",
+      "font_col_heads": "#171717",
+      "font_col_shoptitle": "#171717",
+      "font_col_sale": "#df5641",
+      "btn_col": "#4c4c4b",
+      "btn_col_alt": "#171717",
+      "btn_col_txt": "#ffffff",
+      "btn_alt_bg": "#ffffff",
+      "btn_alt_txt": "#4c4c4b",
+      "bg_col": "#ffffff",
+      "bg_image": "",
+      "bg_method": "repeatxy",
+      "head_bg_col": "#ffffff",
+      "head_txt_col": "#171717",
+      "head_nav_div_col": "#e2e2e2",
+      "font_col_nav": "#808284",
+      "font_col_nav_hov": "#171717",
+      "panel_nav_bg": "#ffffff",
+      "nav_featured_col": "#df5641",
+      "not_shade_bg": "#f7f7f8",
+      "head_not_col_bg": "#ebebeb",
+      "head_not_col_txt1": "#171717",
+      "head_not_col_txt2": "#4c4c4b",
+      "image_overlay_text": "#ffffff",
+      "image_overlay_bg": "#171717",
+      "image_overlay_opacity": 10,
+      "alt_bg_col": "#f7f7f8",
+      "alt_bg_text_col": "#171717",
+      "prod_thumb_detail_bg": "#f7f7f8",
+      "prod_thumb_detail_col": "#808284",
+      "prod_thumb_detail_col_a": "#171717",
+      "prod_over_redu_text": "#df5641",
+      "prod_over_redu_bg": "#ffffff",
+      "prod_over_low_bg": "#4c4c4b",
+      "prod_over_new_text": "#808284",
+      "prod_over_new_bg": "#ffffff",
+      "prod_label_sale_text": "#df5641",
+      "prod_label_sold_text": "#171717",
+      "prod_label_pre_text": "#60a57e",
+      "cross_page_promo_bg": "#ffffff",
+      "cross_page_promo_color": "#171717",
+      "foot_bg_col": "#f7f7f8",
+      "foot_text_col": "#808284",
+      "foot_heading_col": "#171717",
+      "foot_divider_col": "#e4e4e4",
+      "type_heading_font": "basic_commercial_n4",
+      "capitalize_headings": false,
+      "type_base_font": "basic_commercial_n4",
+      "type_nav_font": "basic_commercial_n4",
+      "type_logo_font": "basic_commercial_n7",
+      "font_size_heading_int": 30,
+      "font_size_base_int": 14,
+      "font_size_nav_int": 14,
+      "font_size_logo_int": 24,
+      "button_style": "normal",
+      "prod_thumb_shape": "natural",
+      "prod_thumb_text_align": "left",
+      "prod_thumb_hover_image": true,
+      "quickbuy_style": "button",
+      "qb_show_description": true,
+      "enable_payment_button": true,
+      "prod_block_label_loc": "top left",
+      "prod_stock_warn_show": true,
+      "prod_stock_warn_limit_int": 10,
+      "prod_sale_show": true,
+      "prod_sold_out_show": true,
+      "variant_style": "listed",
+      "swatch_enabled": true,
+      "swatch_option_name": "Color",
+      "swatch_images": true,
+      "search_type": "product,article,page",
+      "enable_live_search": true,
+      "live_search_show_vendor": false,
+      "live_search_show_price": false,
+      "live_search_search_meta": false,
+      "cart_type": "drawer",
+      "sections": {
+        "cross-page-promos": {
+          "type": "cross-page-promos",
+          "blocks": {
+            "1478526632862": {
+              "type": "icon",
+              "settings": {
+                "icon": "delivery",
+                "text": "Free delivery!"
+              }
+            },
+            "1478526645605": {
+              "type": "icon",
+              "settings": {
+                "icon": "location",
+                "text": "Your nearest store"
+              }
+            },
+            "1478526647261": {
+              "type": "icon",
+              "settings": {
+                "icon": "gift",
+                "text": "Gift cards"
+              }
+            },
+            "1478527611164": {
+              "type": "icon",
+              "settings": {
+                "icon": "label",
+                "text": "Student discount"
+              }
+            }
+          },
+          "block_order": [
+            "1478526632862",
+            "1478526645605",
+            "1478526647261",
+            "1478527611164"
+          ],
+          "settings": {
+            "visibility": "all"
+          }
+        },
+        "1478606404805": {
+          "type": "featured-blog",
+          "settings": {
+            "post_limit": 3,
+            "show_author": true,
+            "show_date": true,
+            "crop_ratio": "1.78"
+          }
+        },
+        "1480591889144": {
+          "type": "featured-collection",
+          "settings": {
+            "show_vendor": false,
+            "enable_carousel": true,
+            "grid": 3,
+            "rows": 1,
+            "use_alt_bg": false,
+            "show_view_all": true,
+            "full_width": true
+          }
+        },
+        "1521035976582": {
+          "type": "image-with-text",
+          "settings": {
+            "image_width": 700,
+            "button_style": "primary",
+            "image_position": "left",
+            "text_alignment": "left",
+            "use_alt_bg": true
+          }
+        },
+        "1521040036892": {
+          "type": "map",
+          "settings": {
+            "color_bg": "#f7f7f8",
+            "full_width": true,
+            "show_pin": true,
+            "show_feature_image": true,
+            "api_key": "",
+            "map_style": "silver"
+          }
+        },
+        "1582890034959": {
+          "type": "rich-text",
+          "settings": {
+            "button_style": "primary",
+            "height": "medium",
+            "text_alignment": "center",
+            "enlarge_text": true,
+            "full_width": false,
+            "use_alt_bg": false
+          }
+        },
+        "1583244060103": {
+          "type": "featured-collection",
+          "settings": {
+            "show_vendor": false,
+            "enable_carousel": true,
+            "grid": 4,
+            "rows": 1,
+            "use_alt_bg": false,
+            "show_view_all": true,
+            "full_width": true
+          }
+        },
+        "footer": {
+          "type": "footer",
+          "blocks": {
+            "1601308717434": {
+              "type": "text",
+              "settings": {
+                "image_width": 150,
+                "show_social_icons": true,
+                "soc_icons_large": false
+              }
+            },
+            "1601308671932": {
+              "type": "menu",
+              "settings": {
+                "menu": "footer"
+              }
+            },
+            "1601308656020": {
+              "type": "newsletter",
+              "settings": {
+                "show_social_icons": false,
+                "soc_icons_large": false
+              }
+            }
+          },
+          "block_order": [
+            "1601308717434",
+            "1601308671932",
+            "1601308656020"
+          ],
+          "settings": {
+            "lower_menu": "",
+            "show_payment_icons": true,
+            "show_locale_selector": true,
+            "show_currency_selector": true
+          }
+        },
+        "1594970282022": {
+          "type": "gallery",
+          "blocks": {
+            "1594970282022-0": {
+              "type": "image",
+              "settings": {
+                "alignment": "center center",
+                "enlarge_image": false,
+                "text_alignment": "bottom left"
+              }
+            },
+            "1594970282022-1": {
+              "type": "image",
+              "settings": {
+                "alignment": "center center",
+                "enlarge_image": false,
+                "text_alignment": "bottom left"
+              }
+            },
+            "1594970282022-2": {
+              "type": "image",
+              "settings": {
+                "alignment": "center center",
+                "enlarge_image": false,
+                "text_alignment": "bottom left"
+              }
+            },
+            "2dd86b78-97bb-4755-bfa0-11df7ebdd780": {
+              "type": "image",
+              "settings": {
+                "alignment": "center center",
+                "enlarge_image": false,
+                "text_alignment": "bottom left"
+              }
+            }
+          },
+          "block_order": [
+            "1594970282022-0",
+            "1594970282022-1",
+            "1594970282022-2",
+            "2dd86b78-97bb-4755-bfa0-11df7ebdd780"
+          ],
+          "settings": {
+            "grid": 2,
+            "desktop_image_height": 740,
+            "mobile_image_height": 500,
+            "enable_margin": false,
+            "full_width": true,
+            "use_alt_bg": false,
+            "enable_carousel": true,
+            "overlay_style": "full",
+            "button_style": "link"
+          }
+        },
+        "product-template": {
+          "type": "product-template",
+          "settings": {
+            "show_tax_and_shipping": false,
+            "show_vendor": true,
+            "show_sku": false,
+            "show_quantity_selector": false,
+            "enable_payment_button": true,
+            "show_pickup_availability": true,
+            "show_backorder_text": true,
+            "show_inventory_notice": true,
+            "inventory_notice_threshold": 10,
+            "inventory_transfers_enable": true,
+            "show_sharing_links": true,
+            "description_location": "beside",
+            "gallery_size": "large",
+            "prod_gall_thumbs_under": "under",
+            "enable_zoom": true,
+            "enable_video_looping": false
+          }
+        },
+        "product-recommendations": {
+          "type": "product-recommendations",
+          "settings": {
+            "show_product_recommendations": true,
+            "show_vendor": false,
+            "grid": 4
+          }
+        },
+        "page-story-template": {
+          "type": "page-story-template",
+          "blocks": {
+            "1594986686939": {
+              "type": "image-with-text-overlay",
+              "settings": {
+                "image_position": "center center",
+                "height": "fixed",
+                "height_desktop": 720,
+                "height_mobile": 460,
+                "title_size": 80,
+                "enlarge_text": true,
+                "text_alignment": "center center",
+                "full_width": true,
+                "mobile_overlay_under": false,
+                "overlay_style": "full"
+              }
+            },
+            "1594975812470": {
+              "type": "rich-text",
+              "settings": {
+                "button_style": "primary",
+                "height": "medium",
+                "text_alignment": "center",
+                "enlarge_text": true,
+                "full_width": false,
+                "use_alt_bg": true
+              }
+            },
+            "1594975869081": {
+              "type": "image-with-text",
+              "settings": {
+                "image_width": 700,
+                "button_style": "secondary",
+                "image_position": "left",
+                "text_alignment": "left",
+                "use_alt_bg": false
+              }
+            },
+            "1594987479871": {
+              "type": "video",
+              "settings": {
+                "title_size": 80,
+                "enlarge_text": true,
+                "text_alignment": "bottom left",
+                "image_position": "center center",
+                "full_width": false,
+                "overlay_style": "no_background"
+              }
+            },
+            "1594990864949": {
+              "type": "image-with-text",
+              "settings": {
+                "image_width": 700,
+                "button_style": "secondary",
+                "image_position": "right",
+                "text_alignment": "left",
+                "use_alt_bg": false
+              }
+            },
+            "1594991967297": {
+              "type": "image-with-text",
+              "settings": {
+                "image_width": 700,
+                "button_style": "primary",
+                "image_position": "left",
+                "text_alignment": "center",
+                "use_alt_bg": true
+              }
+            }
+          },
+          "block_order": [
+            "1594986686939",
+            "1594975812470",
+            "1594975869081",
+            "1594987479871",
+            "1594990864949",
+            "1594991967297"
+          ],
+          "settings": {
+            "show_page_content": false
+          }
+        },
+        "1594980584619": {
+          "type": "background-video",
+          "settings": {
+            "title_size": 90,
+            "enlarge_text": true,
+            "text_alignment": "center center",
+            "height_desktop": 740,
+            "height_mobile": 580,
+            "full_width": true,
+            "overlay_style": "no_background"
+          }
+        },
+        "collection-template": {
+          "type": "collection-template",
+          "settings": {
+            "show_image_behind_heading": false,
+            "heading_image_height": "medium",
+            "coll_num_per_page_int": 24,
+            "grid": 3,
+            "ajax_products": true,
+            "show_vendor": false,
+            "coll_desc_pos": "below",
+            "coll_show_sort": true,
+            "coll_show_feat": false,
+            "tag_filtering": "tag_groups",
+            "collapse_tag_sidebar_by_default": false,
+            "subcoll_menu": "main-menu",
+            "subcoll_style": "gallery",
+            "subcoll_gall_shape": "l-64",
+            "image_position": "center center",
+            "subcoll_gall_enable_margin": false,
+            "subcoll_gall_full_width": true,
+            "subcoll_gall_overlay_style": "full",
+            "subcoll_gall_text_alignment": "bottom left",
+            "subcoll_gall_mobile_layout": "2"
+          }
+        },
+        "blog-template": {
+          "type": "blog-template",
+          "settings": {
+            "layout": "columns",
+            "show_date": true,
+            "show_author": true,
+            "show_article_tags": true,
+            "show_sharing_icons": true,
+            "show_rss_icon": true,
+            "crop_image": true,
+            "crop_style": "16-9"
+          }
+        },
+        "announcement-bar": {
+          "type": "announcement-bar",
+          "settings": {
+            "announcement_show": true,
+            "announcement_bar_col": "#202020",
+            "announcement_text_col": "#ffffff",
+            "show_social_icons": true,
+            "show_locale_selector": true,
+            "show_currency_selector": true
+          }
+        },
+        "header": {
+          "type": "header",
+          "settings": {
+            "logo_img_width_int": 150,
+            "enable_sticky": true,
+            "menu_layout": "inline-menu-left"
+          }
+        },
+        "store-messages": {
+          "type": "store-messages",
+          "blocks": {
+            "1601308104445": {
+              "type": "message",
+              "settings": {
+                "heading": "",
+                "subheading": "Free shipping on orders over $100"
+              }
+            },
+            "1601308125690": {
+              "type": "message",
+              "settings": {
+                "heading": "",
+                "subheading": "Free Click & Collect to US stores*"
+              }
+            },
+            "1601308127822": {
+              "type": "message",
+              "settings": {
+                "heading": "",
+                "subheading": "Free and easy domestic returns"
+              }
+            }
+          },
+          "block_order": [
+            "1601308104445",
+            "1601308125690",
+            "1601308127822"
+          ],
+          "settings": {
+            "head_not_home_only": false,
+            "head_not_mob_show": true,
+            "head_not_mob_text": "Free shipping on orders over $100"
+          }
+        },
+        "popup": {
+          "type": "popup",
+          "settings": {
+            "mode": "enabled",
+            "popup_delay_seconds": 6,
+            "popup_dismiss_for_days": 2,
+            "position": "center",
+            "show_newsletter": true,
+            "show_social_icons": true
+          }
+        },
+        "16115832006dc80dc9": {
+          "type": "testimonials",
+          "blocks": {
+            "16115832006dc80dc9-0": {
+              "type": "testimonial",
+              "settings": {
+                "star_rating": 5
+              }
+            },
+            "16115832006dc80dc9-1": {
+              "type": "testimonial",
+              "settings": {
+                "star_rating": 5
+              }
+            }
+          },
+          "block_order": [
+            "16115832006dc80dc9-0",
+            "16115832006dc80dc9-1"
+          ],
+          "settings": {
+            "layout": "image-right",
+            "image_shape": "square",
+            "use_alt_bg": true
+          }
+        },
+        "search-template": {
+          "type": "search-template",
+          "settings": {
+            "show_vendor": false,
+            "coll_num_per_page_int": 24,
+            "grid": 4
+          }
+        },
+        "161158693318e52003": {
+          "type": "text-columns-with-images",
+          "blocks": {
+            "161158693318e52003-1": {
+              "type": "text_block",
+              "settings": {
+                "enable_image": true,
+                "image_width": 700
+              }
+            },
+            "161158693318e52003-0": {
+              "type": "text_block",
+              "settings": {
+                "enable_image": true,
+                "image_width": 700
+              }
+            }
+          },
+          "block_order": [
+            "161158693318e52003-1",
+            "161158693318e52003-0"
+          ],
+          "settings": {
+            "title": "",
+            "text_alignment": "left",
+            "button_style": "primary",
+            "use_alt_bg": false
+          }
+        },
+        "1614871838b4f4ccd4": {
+          "type": "text-columns-with-images",
+          "blocks": {
+            "1614871838b4f4ccd4-0": {
+              "type": "text_block",
+              "settings": {
+                "enable_image": true,
+                "image_width": 700
+              }
+            },
+            "1614871838b4f4ccd4-1": {
+              "type": "text_block",
+              "settings": {
+                "enable_image": true,
+                "image_width": 700
+              }
+            },
+            "1614871838b4f4ccd4-2": {
+              "type": "text_block",
+              "settings": {
+                "enable_image": true,
+                "image_width": 700
+              }
+            }
+          },
+          "block_order": [
+            "1614871838b4f4ccd4-0",
+            "1614871838b4f4ccd4-1",
+            "1614871838b4f4ccd4-2"
+          ],
+          "settings": {
+            "title": "",
+            "text_alignment": "center",
+            "button_style": "primary",
+            "use_alt_bg": false
+          }
+        },
+        "1614873846ee4b328c": {
+          "type": "rich-text",
+          "settings": {
+            "button_style": "primary",
+            "height": "medium",
+            "text_alignment": "center",
+            "enlarge_text": true,
+            "full_width": false,
+            "use_alt_bg": false
+          }
+        },
+        "16148743091427bc38": {
+          "type": "image-with-text",
+          "settings": {
+            "image_width": 700,
+            "button_style": "primary",
+            "image_position": "left",
+            "text_alignment": "left",
+            "use_alt_bg": true
+          }
+        },
+        "article-template": {
+          "type": "article-template",
+          "settings": {
+            "show_featured_image": true,
+            "show_date": true,
+            "show_author": true,
+            "show_article_tags": true,
+            "show_sharing_icons": true
+          }
+        }
+      },
+      "content_for_index": [
+        "1594980584619",
+        "1582890034959",
+        "1614871838b4f4ccd4",
+        "16115832006dc80dc9",
+        "1480591889144",
+        "1594970282022",
+        "1614873846ee4b328c",
+        "161158693318e52003",
+        "1521035976582",
+        "1583244060103",
+        "16148743091427bc38",
+        "1478606404805",
+        "1521040036892"
+      ]
+    },
+    "Beatnik": {
+      "use_fullwidth_layout": true,
+      "font_col_base": "#637381",
+      "font_col_link": "#637381",
+      "font_col_link_hover": "#333029",
+      "font_col_heads": "#333029",
+      "font_col_shoptitle": "#333029",
+      "font_col_sale": "#df5641",
+      "btn_col": "#013299",
+      "btn_col_alt": "#000000",
+      "btn_col_txt": "#ffffff",
+      "btn_alt_bg": "#ffffff",
+      "btn_alt_txt": "#000000",
+      "bg_col": "#ffffff",
+      "bg_image": "",
+      "bg_method": "repeatxy",
+      "head_bg_col": "#ffffff",
+      "head_txt_col": "#232323",
+      "head_nav_div_col": "#e2e2e2",
+      "font_col_nav": "#555555",
+      "font_col_nav_hov": "#000000",
+      "panel_nav_bg": "#ffffff",
+      "nav_featured_col": "#df5641",
+      "not_shade_bg": "#f6f6f6",
+      "head_not_col_bg": "#f6f6f6",
+      "head_not_col_txt1": "#333029",
+      "head_not_col_txt2": "#555555",
+      "image_overlay_text": "#ffffff",
+      "image_overlay_bg": "#000000",
+      "image_overlay_opacity": 10,
+      "alt_bg_col": "#f6f6f6",
+      "alt_bg_text_col": "#333029",
+      "prod_thumb_detail_bg": "#f6f6f6",
+      "prod_thumb_detail_col": "#333029",
+      "prod_thumb_detail_col_a": "#637381",
+      "prod_over_redu_text": "#df5641",
+      "prod_over_redu_bg": "#ffffff",
+      "prod_over_low_text": "#637381",
+      "prod_over_low_bg": "#ffffff",
+      "prod_over_new_bg": "#013299",
+      "prod_label_sale_text": "#df5641",
+      "prod_label_pre_text": "#60a57e",
+      "cross_page_promo_bg": "#f6f6f6",
+      "cross_page_promo_color": "#333029",
+      "foot_bg_col": "#ffffff",
+      "foot_text_col": "#939393",
+      "foot_heading_col": "#000000",
+      "foot_divider_col": "#e0e0e0",
+      "type_heading_font": "gill_sans_nova_n6",
+      "capitalize_headings": true,
+      "type_base_font": "futura_n4",
+      "type_nav_font": "futura_n5",
+      "type_logo_font": "gill_sans_nova_n6",
+      "font_size_heading_int": 28,
+      "font_size_base_int": 15,
+      "font_size_nav_int": 14,
+      "font_size_logo_int": 28,
+      "button_style": "caps",
+      "prod_thumb_shape": "natural",
+      "prod_thumb_text_align": "left",
+      "prod_thumb_hover_image": true,
+      "quickbuy_style": "button",
+      "qb_show_description": true,
+      "enable_payment_button": true,
+      "prod_block_label_loc": "top left",
+      "prod_reduction_type": "percent",
+      "prod_stock_warn_show": true,
+      "prod_stock_warn_limit_int": 5,
+      "prod_new_method": "collection",
+      "prod_new_limit_int": 100,
+      "prod_sale_show": true,
+      "prod_sold_out_show": true,
+      "variant_style": "listed",
+      "swatch_enabled": true,
+      "swatch_option_name": "Color",
+      "swatch_images": true,
+      "search_type": "product,article,page",
+      "enable_live_search": true,
+      "live_search_show_vendor": false,
+      "live_search_show_price": false,
+      "live_search_search_meta": false,
+      "cart_type": "drawer",
+      "sections": {
+        "header": {
+          "type": "header",
+          "settings": {
+            "logo_img_width_int": 125,
+            "enable_sticky": true,
+            "menu_layout": "underneath"
+          }
+        },
+        "cross-page-promos": {
+          "type": "cross-page-promos",
+          "blocks": {
+            "1478526632862": {
+              "type": "icon",
+              "settings": {
+                "icon": "delivery",
+                "text": "Free delivery!"
+              }
+            },
+            "1478526645605": {
+              "type": "icon",
+              "settings": {
+                "icon": "location",
+                "text": "Your nearest store"
+              }
+            },
+            "1478526647261": {
+              "type": "icon",
+              "settings": {
+                "icon": "gift",
+                "text": "Gift cards"
+              }
+            },
+            "1478527611164": {
+              "type": "icon",
+              "settings": {
+                "icon": "label",
+                "text": "Student discount"
+              }
+            }
+          },
+          "block_order": [
+            "1478526632862",
+            "1478526645605",
+            "1478526647261",
+            "1478527611164"
+          ],
+          "settings": {
+            "visibility": "all"
+          }
+        },
+        "1478606404805": {
+          "type": "featured-blog",
+          "settings": {
+            "post_limit": 3,
+            "show_author": true,
+            "show_date": true,
+            "crop_ratio": "1.78"
+          }
+        },
+        "1478795901388": {
+          "type": "slideshow",
+          "blocks": {
+            "1478795901388-1": {
+              "type": "image",
+              "settings": {
+                "image_position": "bottom center",
+                "title_size": 96,
+                "enlarge_text": true,
+                "text_alignment": "bottom left"
+              }
+            },
+            "1594843344719": {
+              "type": "image",
+              "settings": {
+                "image_position": "center center",
+                "title_size": 96,
+                "enlarge_text": true,
+                "text_alignment": "top right"
+              }
+            },
+            "3a06e861-2d2a-4676-ba3f-428273e16149": {
+              "type": "image",
+              "settings": {
+                "image_position": "center center",
+                "title_size": 96,
+                "enlarge_text": true,
+                "text_alignment": "center center"
+              }
+            }
+          },
+          "block_order": [
+            "1478795901388-1",
+            "1594843344719",
+            "3a06e861-2d2a-4676-ba3f-428273e16149"
+          ],
+          "settings": {
+            "height": "fixed",
+            "height_desktop": 720,
+            "height_mobile": 260,
+            "full_width": true,
+            "mobile_overlay_under": true,
+            "overlay_style": "no_background",
+            "slide_transition": "fade",
+            "slide_navigation": "dots",
+            "autoplay": true,
+            "autoplay_speed": 5
+          }
+        },
+        "1480591889144": {
+          "type": "featured-collection",
+          "settings": {
+            "show_vendor": false,
+            "enable_carousel": true,
+            "grid": 3,
+            "rows": 1,
+            "use_alt_bg": false,
+            "show_view_all": true,
+            "full_width": true
+          }
+        },
+        "1521035976582": {
+          "type": "image-with-text",
+          "settings": {
+            "image_width": 700,
+            "button_style": "primary",
+            "image_position": "left",
+            "text_alignment": "left",
+            "use_alt_bg": true
+          }
+        },
+        "1521040036892": {
+          "type": "map",
+          "settings": {
+            "color_bg": "#153171",
+            "full_width": true,
+            "show_pin": true,
+            "show_feature_image": true,
+            "map_style": "silver"
+          }
+        },
+        "1582890034959": {
+          "type": "rich-text",
+          "settings": {
+            "button_style": "primary",
+            "height": "large",
+            "text_alignment": "center",
+            "enlarge_text": true,
+            "full_width": false,
+            "use_alt_bg": false
+          }
+        },
+        "footer": {
+          "type": "footer",
+          "blocks": {
+            "1601372812538": {
+              "type": "text",
+              "settings": {
+                "image_width": 55,
+                "show_social_icons": true,
+                "soc_icons_large": true
+              }
+            },
+            "1601372709037": {
+              "type": "menu",
+              "settings": {
+                "menu": "footer"
+              }
+            },
+            "1601372771635": {
+              "type": "newsletter",
+              "settings": {
+                "show_social_icons": true,
+                "soc_icons_large": false
+              }
+            }
+          },
+          "block_order": [
+            "1601372812538",
+            "1601372709037",
+            "1601372771635"
+          ],
+          "settings": {
+            "show_payment_icons": true,
+            "show_locale_selector": true,
+            "show_currency_selector": true
+          }
+        },
+        "product-template": {
+          "type": "product-template",
+          "settings": {
+            "show_tax_and_shipping": false,
+            "show_vendor": true,
+            "show_sku": false,
+            "show_quantity_selector": true,
+            "enable_payment_button": true,
+            "show_pickup_availability": true,
+            "show_backorder_text": true,
+            "show_inventory_notice": false,
+            "inventory_notice_threshold": 10,
+            "inventory_transfers_enable": true,
+            "show_sharing_links": true,
+            "gallery_size": "medium",
+            "prod_gall_thumbs_under": "under",
+            "enable_zoom": true,
+            "enable_video_looping": false,
+            "description_location": "beside"
+          }
+        },
+        "product-recommendations": {
+          "type": "product-recommendations",
+          "settings": {
+            "show_product_recommendations": true,
+            "show_vendor": false,
+            "grid": 4
+          }
+        },
+        "1594114653504": {
+          "type": "gallery",
+          "blocks": {
+            "1594114653504-1": {
+              "type": "image",
+              "settings": {
+                "alignment": "center center",
+                "enlarge_image": false,
+                "text_alignment": "bottom left"
+              }
+            },
+            "1594114653504-0": {
+              "type": "image",
+              "settings": {
+                "alignment": "center center",
+                "enlarge_image": false,
+                "text_alignment": "bottom left"
+              }
+            }
+          },
+          "block_order": [
+            "1594114653504-1",
+            "1594114653504-0"
+          ],
+          "settings": {
+            "grid": 3,
+            "desktop_image_height": 460,
+            "mobile_image_height": 410,
+            "enable_margin": true,
+            "full_width": false,
+            "use_alt_bg": false,
+            "enable_carousel": true,
+            "overlay_style": "box",
+            "button_style": "link"
+          }
+        },
+        "1594115419591": {
+          "type": "image-with-text",
+          "settings": {
+            "image_width": 700,
+            "button_style": "secondary",
+            "image_position": "right",
+            "text_alignment": "center",
+            "use_alt_bg": false
+          }
+        },
+        "1594117553907": {
+          "type": "text-columns-with-images",
+          "blocks": {
+            "1594117553907-0": {
+              "type": "text_block",
+              "settings": {
+                "enable_image": true,
+                "image_width": 700
+              }
+            },
+            "1594117553907-1": {
+              "type": "text_block",
+              "settings": {
+                "enable_image": true,
+                "image_width": 700
+              }
+            }
+          },
+          "block_order": [
+            "1594117553907-0",
+            "1594117553907-1"
+          ],
+          "settings": {
+            "title": "",
+            "text_alignment": "left",
+            "button_style": "link",
+            "use_alt_bg": false
+          }
+        },
+        "collection-template": {
+          "type": "collection-template",
+          "settings": {
+            "show_image_behind_heading": false,
+            "heading_image_height": "medium",
+            "coll_num_per_page_int": 24,
+            "grid": 4,
+            "show_vendor": false,
+            "coll_desc_pos": "below",
+            "ajax_products": true,
+            "coll_show_sort": true,
+            "coll_show_feat": false,
+            "subcoll_menu": "main-menu",
+            "subcoll_style": "buttons",
+            "subcoll_gall_shape": "sq",
+            "image_position": "center center",
+            "subcoll_gall_enable_margin": true,
+            "subcoll_gall_full_width": false,
+            "subcoll_gall_overlay_style": "full",
+            "subcoll_gall_text_alignment": "center center",
+            "subcoll_gall_mobile_layout": "2"
+          }
+        },
+        "1594812667022": {
+          "type": "background-video",
+          "settings": {
+            "title_size": 96,
+            "enlarge_text": true,
+            "text_alignment": "center center",
+            "height_desktop": 720,
+            "height_mobile": 460,
+            "full_width": true,
+            "overlay_style": "no_background"
+          }
+        },
+        "article-template": {
+          "type": "article-template",
+          "settings": {
+            "show_featured_image": true,
+            "show_date": true,
+            "show_author": true,
+            "show_article_tags": true,
+            "show_sharing_icons": true
+          }
+        },
+        "1594838654839": {
+          "type": "image-with-text",
+          "settings": {
+            "image_width": 700,
+            "button_style": "primary",
+            "image_position": "right",
+            "text_alignment": "center",
+            "use_alt_bg": true
+          }
+        },
+        "blog-template": {
+          "type": "blog-template",
+          "settings": {
+            "layout": "columns",
+            "show_date": true,
+            "show_author": true,
+            "show_article_tags": true,
+            "show_sharing_icons": true,
+            "show_rss_icon": true,
+            "crop_image": true,
+            "crop_style": "16-9"
+          }
+        },
+        "page-story-template": {
+          "type": "page-story-template",
+          "blocks": {
+            "1595243968279": {
+              "type": "image-with-text-overlay",
+              "settings": {
+                "image_position": "center right",
+                "height": "fixed",
+                "height_desktop": 720,
+                "height_mobile": 500,
+                "title_size": 96,
+                "enlarge_text": true,
+                "text_alignment": "center center",
+                "full_width": true,
+                "mobile_overlay_under": false,
+                "overlay_style": "full"
+              }
+            },
+            "1595244647710": {
+              "type": "rich-text",
+              "settings": {
+                "button_style": "primary",
+                "height": "medium",
+                "text_alignment": "center",
+                "enlarge_text": false,
+                "full_width": false,
+                "use_alt_bg": true
+              }
+            },
+            "1595245621044": {
+              "type": "image-with-text",
+              "settings": {
+                "image_width": 700,
+                "button_style": "primary",
+                "image_position": "left",
+                "text_alignment": "center",
+                "use_alt_bg": false
+              }
+            },
+            "1595249809664": {
+              "type": "image-with-text-overlay",
+              "settings": {
+                "image_position": "center center",
+                "height": "fixed",
+                "height_desktop": 720,
+                "height_mobile": 500,
+                "title_size": 60,
+                "enlarge_text": true,
+                "text_alignment": "center left",
+                "full_width": true,
+                "mobile_overlay_under": false,
+                "overlay_style": "full"
+              }
+            },
+            "1595248689359": {
+              "type": "image-with-text",
+              "settings": {
+                "image_width": 700,
+                "button_style": "primary",
+                "image_position": "left",
+                "text_alignment": "left",
+                "use_alt_bg": false
+              }
+            },
+            "1595250831561": {
+              "type": "rich-text",
+              "settings": {
+                "button_style": "primary",
+                "height": "medium",
+                "text_alignment": "center",
+                "enlarge_text": true,
+                "full_width": false,
+                "use_alt_bg": false
+              }
+            }
+          },
+          "block_order": [
+            "1595243968279",
+            "1595244647710",
+            "1595245621044",
+            "1595249809664",
+            "1595248689359",
+            "1595250831561"
+          ],
+          "settings": {
+            "show_page_content": false
+          }
+        },
+        "announcement-bar": {
+          "type": "announcement-bar",
+          "settings": {
+            "announcement_show": true,
+            "announcement_bar_col": "#001d7c",
+            "announcement_text_col": "#ffffff",
+            "show_social_icons": true,
+            "show_locale_selector": true,
+            "show_currency_selector": true
+          }
+        },
+        "store-messages": {
+          "type": "store-messages",
+          "settings": {
+            "head_not_home_only": false,
+            "head_not_mob_show": false,
+            "head_not_mob_text": ""
+          }
+        },
+        "popup": {
+          "type": "popup",
+          "settings": {
+            "mode": "enabled",
+            "popup_delay_seconds": 4,
+            "popup_dismiss_for_days": 2,
+            "position": "bottom-right",
+            "show_newsletter": true,
+            "show_social_icons": true
+          }
+        },
+        "16116734804c2e0585": {
+          "type": "testimonials",
+          "blocks": {
+            "16116734804c2e0585-0": {
+              "type": "testimonial",
+              "settings": {
+                "star_rating": 5
+              }
+            },
+            "16116734804c2e0585-1": {
+              "type": "testimonial",
+              "settings": {
+                "star_rating": 5
+              }
+            }
+          },
+          "block_order": [
+            "16116734804c2e0585-0",
+            "16116734804c2e0585-1"
+          ],
+          "settings": {
+            "layout": "image-right",
+            "image_shape": "landscape",
+            "use_alt_bg": true
+          }
+        }
+      },
+      "content_for_index": [
+        "1478795901388",
+        "1582890034959",
+        "1594114653504",
+        "1480591889144",
+        "1521035976582",
+        "1594115419591",
+        "1594812667022",
+        "1594117553907",
+        "1594838654839",
+        "1478606404805",
+        "16116734804c2e0585",
+        "1521040036892"
+      ]
+    },
+    "Duke": {
+      "use_fullwidth_layout": true,
+      "font_col_base": "#637381",
+      "font_col_link": "#637381",
+      "font_col_link_hover": "#000000",
+      "font_col_heads": "#000000",
+      "font_col_shoptitle": "#000000",
+      "font_col_sale": "#c4293d",
+      "btn_col": "#000000",
+      "btn_col_alt": "#212b36",
+      "btn_col_txt": "#ffffff",
+      "btn_alt_bg": "#ffffff",
+      "btn_alt_txt": "#000000",
+      "bg_col": "#ffffff",
+      "bg_image": "",
+      "bg_method": "repeatxy",
+      "head_bg_col": "#ffffff",
+      "head_txt_col": "#000000",
+      "head_nav_div_col": "#e2e2e2",
+      "font_col_nav": "#555555",
+      "font_col_nav_hov": "#000000",
+      "panel_nav_bg": "#ffffff",
+      "nav_featured_col": "#c4293d",
+      "not_shade_bg": "#fafafa",
+      "head_not_col_bg": "#f8f8f8",
+      "head_not_col_txt1": "#000000",
+      "head_not_col_txt2": "#555555",
+      "image_overlay_text": "#ffe802",
+      "image_overlay_bg": "#000000",
+      "image_overlay_opacity": 9,
+      "alt_bg_col": "#ffe802",
+      "alt_bg_text_col": "#000000",
+      "prod_thumb_detail_bg": "#f6f6f6",
+      "prod_thumb_detail_col": "#212b36",
+      "prod_thumb_detail_col_a": "#637381",
+      "prod_over_redu_text": "#c4293d",
+      "prod_over_redu_bg": "#ffffff",
+      "prod_over_low_text": "#808284",
+      "prod_over_low_bg": "#ffffff",
+      "prod_over_new_text": "#808284",
+      "prod_over_new_bg": "#ffffff",
+      "prod_label_sale_text": "#c4293d",
+      "prod_label_sold_text": "#000000",
+      "prod_label_pre_text": "#60a57e",
+      "cross_page_promo_bg": "#f8f8f8",
+      "cross_page_promo_color": "#212b36",
+      "foot_bg_col": "#ffffff",
+      "foot_text_col": "#939393",
+      "foot_heading_col": "#000000",
+      "foot_divider_col": "#eeeeee",
+      "type_heading_font": "helvetica_n7",
+      "capitalize_headings": true,
+      "type_base_font": "helvetica_n4",
+      "type_nav_font": "helvetica_n4",
+      "type_logo_font": "helvetica_n7",
+      "font_size_heading_int": 30,
+      "font_size_base_int": 14,
+      "font_size_nav_int": 14,
+      "font_size_logo_int": 24,
+      "button_style": "normal",
+      "prod_thumb_shape": "natural",
+      "prod_thumb_hover_image": true,
+      "qb_show_description": true,
+      "enable_payment_button": true,
+      "prod_block_label_loc": "top right",
+      "prod_stock_warn_show": true,
+      "prod_stock_warn_limit_int": 10,
+      "prod_new_method": "date",
+      "prod_new_limit_int": 100,
+      "prod_sale_show": true,
+      "prod_sold_out_show": true,
+      "variant_style": "listed",
+      "swatch_enabled": true,
+      "swatch_option_name": "Color",
+      "swatch_images": true,
+      "search_type": "product,article,page",
+      "enable_live_search": true,
+      "live_search_show_vendor": false,
+      "live_search_show_price": false,
+      "live_search_search_meta": false,
+      "cart_type": "drawer",
+      "sections": {
+        "header": {
+          "type": "header",
+          "settings": {
+            "logo_img_width_int": 75,
+            "enable_sticky": true,
+            "menu_layout": "inline-menu-center"
+          }
+        },
+        "cross-page-promos": {
+          "type": "cross-page-promos",
+          "blocks": {
+            "1478526632862": {
+              "type": "icon",
+              "settings": {
+                "icon": "delivery",
+                "text": "Free delivery!"
+              }
+            },
+            "1478526645605": {
+              "type": "icon",
+              "settings": {
+                "icon": "location",
+                "text": "Your nearest store"
+              }
+            },
+            "1478526647261": {
+              "type": "icon",
+              "settings": {
+                "icon": "gift",
+                "text": "Gift cards"
+              }
+            },
+            "1478527611164": {
+              "type": "icon",
+              "settings": {
+                "icon": "label",
+                "text": "Student discount"
+              }
+            }
+          },
+          "block_order": [
+            "1478526632862",
+            "1478526645605",
+            "1478526647261",
+            "1478527611164"
+          ],
+          "settings": {
+            "visibility": "all"
+          }
+        },
+        "1478795901388": {
+          "type": "slideshow",
+          "blocks": {
+            "1478795901388-1": {
+              "type": "image",
+              "settings": {
+                "image_position": "top left",
+                "title_size": 150,
+                "enlarge_text": true,
+                "text_alignment": "bottom left"
+              }
+            }
+          },
+          "block_order": [
+            "1478795901388-1"
+          ],
+          "settings": {
+            "height": "fixed",
+            "height_desktop": 760,
+            "height_mobile": 420,
+            "full_width": true,
+            "mobile_overlay_under": false,
+            "overlay_style": "no_background",
+            "slide_transition": "fade",
+            "slide_navigation": "none",
+            "autoplay": true,
+            "autoplay_speed": 7
+          }
+        },
+        "1480591889144": {
+          "type": "featured-collection",
+          "settings": {
+            "show_vendor": false,
+            "enable_carousel": true,
+            "grid": 3,
+            "rows": 1,
+            "use_alt_bg": false,
+            "show_view_all": true,
+            "full_width": true
+          }
+        },
+        "1521034575223": {
+          "type": "image-with-text",
+          "settings": {
+            "image_width": 700,
+            "button_style": "primary",
+            "image_position": "left",
+            "text_alignment": "left",
+            "use_alt_bg": true
+          }
+        },
+        "1521035976582": {
+          "type": "image-with-text",
+          "settings": {
+            "image_width": 700,
+            "button_style": "primary",
+            "image_position": "right",
+            "text_alignment": "left",
+            "use_alt_bg": true
+          }
+        },
+        "1583244060103": {
+          "type": "featured-collection",
+          "settings": {
+            "show_vendor": false,
+            "enable_carousel": false,
+            "grid": 3,
+            "rows": 2,
+            "use_alt_bg": false,
+            "show_view_all": true,
+            "full_width": false
+          }
+        },
+        "footer": {
+          "type": "footer",
+          "blocks": {
+            "1599638662124": {
+              "type": "text",
+              "settings": {
+                "image_width": 75,
+                "show_social_icons": true,
+                "soc_icons_large": false
+              }
+            },
+            "1599639374976": {
+              "type": "menu",
+              "settings": {
+                "menu": "footer"
+              }
+            },
+            "1599639431729": {
+              "type": "newsletter",
+              "settings": {
+                "show_social_icons": true,
+                "soc_icons_large": false
+              }
+            }
+          },
+          "block_order": [
+            "1599638662124",
+            "1599639374976",
+            "1599639431729"
+          ],
+          "settings": {
+            "lower_menu": "",
+            "show_payment_icons": true,
+            "show_locale_selector": true,
+            "show_currency_selector": true
+          }
+        },
+        "1595062506799": {
+          "type": "gallery",
+          "blocks": {
+            "1595062506799-0": {
+              "type": "image",
+              "settings": {
+                "alignment": "center center",
+                "enlarge_image": false,
+                "text_alignment": "bottom left"
+              }
+            },
+            "1595062506799-1": {
+              "type": "image",
+              "settings": {
+                "alignment": "top center",
+                "enlarge_image": false,
+                "text_alignment": "bottom left"
+              }
+            }
+          },
+          "block_order": [
+            "1595062506799-0",
+            "1595062506799-1"
+          ],
+          "settings": {
+            "grid": 3,
+            "desktop_image_height": 480,
+            "mobile_image_height": 480,
+            "enable_margin": true,
+            "full_width": false,
+            "use_alt_bg": false,
+            "enable_carousel": true,
+            "overlay_style": "box",
+            "button_style": "link"
+          }
+        },
+        "1595063270897": {
+          "type": "background-video",
+          "settings": {
+            "title_size": 150,
+            "enlarge_text": true,
+            "text_alignment": "top left",
+            "height_desktop": 800,
+            "height_mobile": 500,
+            "full_width": true,
+            "overlay_style": "no_background"
+          }
+        },
+        "1595065871135": {
+          "type": "gallery",
+          "blocks": {
+            "1595065871135-0": {
+              "type": "image",
+              "settings": {
+                "alignment": "center center",
+                "enlarge_image": false,
+                "text_alignment": "center center"
+              }
+            },
+            "1595065871135-1": {
+              "type": "image",
+              "settings": {
+                "alignment": "center center",
+                "enlarge_image": false,
+                "text_alignment": "center center"
+              }
+            },
+            "1595065871135-2": {
+              "type": "image",
+              "settings": {
+                "alignment": "center center",
+                "enlarge_image": false,
+                "text_alignment": "center center"
+              }
+            }
+          },
+          "block_order": [
+            "1595065871135-0",
+            "1595065871135-1",
+            "1595065871135-2"
+          ],
+          "settings": {
+            "grid": 3,
+            "desktop_image_height": 300,
+            "mobile_image_height": 400,
+            "enable_margin": true,
+            "full_width": false,
+            "use_alt_bg": false,
+            "enable_carousel": true,
+            "overlay_style": "full",
+            "button_style": "primary"
+          }
+        },
+        "product-template": {
+          "type": "product-template",
+          "settings": {
+            "show_tax_and_shipping": false,
+            "show_vendor": true,
+            "show_sku": false,
+            "show_quantity_selector": true,
+            "enable_payment_button": true,
+            "show_pickup_availability": true,
+            "show_backorder_text": true,
+            "show_inventory_notice": true,
+            "inventory_notice_threshold": 10,
+            "inventory_transfers_enable": true,
+            "show_sharing_links": true,
+            "gallery_size": "medium",
+            "prod_gall_thumbs_under": "beside",
+            "enable_zoom": true,
+            "enable_video_looping": false,
+            "description_location": "beside"
+          }
+        },
+        "product-recommendations": {
+          "type": "product-recommendations",
+          "settings": {
+            "show_product_recommendations": true,
+            "show_vendor": false,
+            "grid": 4
+          }
+        },
+        "1595067713114": {
+          "type": "gallery",
+          "blocks": {
+            "1595067713114-0": {
+              "type": "image",
+              "settings": {
+                "alignment": "center center",
+                "enlarge_image": false,
+                "text_alignment": "center center"
+              }
+            },
+            "1595067713114-1": {
+              "type": "image",
+              "settings": {
+                "alignment": "center center",
+                "enlarge_image": false,
+                "text_alignment": "center center"
+              }
+            },
+            "1595067713114-2": {
+              "type": "image",
+              "settings": {
+                "alignment": "center center",
+                "enlarge_image": false,
+                "text_alignment": "center center"
+              }
+            }
+          },
+          "block_order": [
+            "1595067713114-0",
+            "1595067713114-1",
+            "1595067713114-2"
+          ],
+          "settings": {
+            "grid": 3,
+            "desktop_image_height": 300,
+            "mobile_image_height": 400,
+            "enable_margin": false,
+            "full_width": true,
+            "use_alt_bg": false,
+            "enable_carousel": true,
+            "overlay_style": "full",
+            "button_style": "primary"
+          }
+        },
+        "collection-template": {
+          "type": "collection-template",
+          "settings": {
+            "show_image_behind_heading": true,
+            "heading_image_height": "huge",
+            "coll_num_per_page_int": 16,
+            "grid": 4,
+            "show_vendor": false,
+            "coll_desc_pos": "below",
+            "ajax_products": true,
+            "coll_show_sort": true,
+            "coll_show_feat": false,
+            "subcoll_style": "buttons",
+            "subcoll_gall_shape": "sq",
+            "image_position": "center center",
+            "subcoll_gall_enable_margin": true,
+            "subcoll_gall_full_width": false,
+            "subcoll_gall_overlay_style": "full",
+            "subcoll_gall_text_alignment": "center center",
+            "subcoll_gall_mobile_layout": "2"
+          }
+        },
+        "page-story-template": {
+          "type": "page-story-template",
+          "blocks": {
+            "1595319633270": {
+              "type": "video",
+              "settings": {
+                "title_size": 150,
+                "enlarge_text": true,
+                "text_alignment": "center center",
+                "image_position": "center center",
+                "full_width": true,
+                "overlay_style": "full"
+              }
+            },
+            "1595320256561": {
+              "type": "image-with-text",
+              "settings": {
+                "image_width": 700,
+                "button_style": "primary",
+                "image_position": "left",
+                "text_alignment": "left",
+                "use_alt_bg": false
+              }
+            },
+            "1595321461928": {
+              "type": "image-with-text",
+              "settings": {
+                "image_width": 700,
+                "button_style": "primary",
+                "image_position": "left",
+                "text_alignment": "left",
+                "use_alt_bg": true
+              }
+            },
+            "1595322081182": {
+              "type": "image-with-text-overlay",
+              "settings": {
+                "image_position": "center center",
+                "height": "fixed",
+                "height_desktop": 600,
+                "height_mobile": 500,
+                "title_size": 34,
+                "enlarge_text": false,
+                "text_alignment": "center right",
+                "full_width": true,
+                "mobile_overlay_under": false,
+                "overlay_style": "full"
+              }
+            }
+          },
+          "block_order": [
+            "1595319633270",
+            "1595320256561",
+            "1595321461928",
+            "1595322081182"
+          ],
+          "settings": {
+            "show_page_content": false
+          }
+        },
+        "announcement-bar": {
+          "type": "announcement-bar",
+          "settings": {
+            "announcement_show": true,
+            "announcement_bar_col": "#000000",
+            "announcement_text_col": "#ffffff",
+            "show_social_icons": true,
+            "show_locale_selector": true,
+            "show_currency_selector": true
+          }
+        },
+        "store-messages": {
+          "type": "store-messages",
+          "blocks": {
+            "1599495506123": {
+              "type": "message",
+              "settings": {
+                "heading": "FREE SHIPPING ON ORDERS $35+",
+                "subheading": ""
+              }
+            },
+            "1599495565638": {
+              "type": "message",
+              "settings": {
+                "heading": "FREE RETURNS",
+                "subheading": ""
+              }
+            },
+            "1599495573176": {
+              "type": "message",
+              "settings": {
+                "heading": "FREE STICKERS WITH ALL ORDERS",
+                "subheading": ""
+              }
+            }
+          },
+          "block_order": [
+            "1599495506123",
+            "1599495565638",
+            "1599495573176"
+          ],
+          "settings": {
+            "head_not_home_only": false,
+            "head_not_mob_show": true,
+            "head_not_mob_text": "FREE SHIPPING ON ORDERS $35+"
+          }
+        },
+        "search-template": {
+          "type": "search-template",
+          "settings": {
+            "show_vendor": false,
+            "coll_num_per_page_int": 24,
+            "grid": 4
+          }
+        },
+        "article-template": {
+          "type": "article-template",
+          "settings": {
+            "show_featured_image": true,
+            "show_date": true,
+            "show_author": true,
+            "show_article_tags": true,
+            "show_sharing_icons": true
+          }
+        },
+        "1605867395e9326332": {
+          "type": "featured-blog",
+          "settings": {
+            "post_limit": 3,
+            "show_author": true,
+            "show_date": true,
+            "crop_ratio": "1.78"
+          }
+        },
+        "popup": {
+          "type": "popup",
+          "settings": {
+            "mode": "enabled",
+            "popup_delay_seconds": 4,
+            "popup_dismiss_for_days": 2,
+            "position": "bottom-right",
+            "show_newsletter": true,
+            "show_social_icons": true
+          }
+        },
+        "1611656731e8ac3466": {
+          "type": "testimonials",
+          "blocks": {
+            "1611656731e8ac3466-0": {
+              "type": "testimonial",
+              "settings": {
+                "star_rating": 5
+              }
+            },
+            "1611656731e8ac3466-1": {
+              "type": "testimonial",
+              "settings": {
+                "star_rating": 5
+              }
+            }
+          },
+          "block_order": [
+            "1611656731e8ac3466-0",
+            "1611656731e8ac3466-1"
+          ],
+          "settings": {
+            "layout": "image-right",
+            "image_shape": "landscape",
+            "use_alt_bg": false
+          }
+        }
+      },
+      "content_for_index": [
+        "1478795901388",
+        "1595062506799",
+        "1480591889144",
+        "1521035976582",
+        "1595063270897",
+        "1583244060103",
+        "1611656731e8ac3466",
+        "1595065871135",
+        "1521034575223",
+        "1605867395e9326332",
+        "1595067713114"
+      ]
+    }
+  },
+  "current": {
+    "use_fullwidth_layout": true,
+    "font_col_base": "#637381",
+    "font_col_link": "#637381",
+    "font_col_link_hover": "#000000",
+    "font_col_heads": "#045052",
+    "font_col_shoptitle": "#000000",
+    "font_col_sale": "#c4293d",
+    "btn_col": "#1a8b43",
+    "btn_col_alt": "#055052",
+    "btn_col_txt": "#ffffff",
+    "btn_alt_bg": "#055052",
+    "btn_alt_txt": "#ffffff",
+    "bg_col": "#f2f6f6",
+    "bg_method": "repeatxy",
+    "head_bg_col": "#ffffff",
+    "head_txt_col": "#045052",
+    "head_nav_div_col": "#f2f6f6",
+    "font_col_nav": "#555555",
+    "font_col_nav_hov": "#000000",
+    "panel_nav_bg": "#ffffff",
+    "nav_featured_col": "#c4293d",
+    "not_shade_bg": "#fafafa",
+    "head_not_col_bg": "#1a8b43",
+    "head_not_col_txt1": "#ffffff",
+    "head_not_col_txt2": "#555555",
+    "image_overlay_text": "#ffe802",
+    "image_overlay_bg": "#000000",
+    "image_overlay_opacity": 9,
+    "alt_bg_col": "#8dc43c",
+    "alt_bg_text_col": "#ffffff",
+    "prod_thumb_detail_bg": "#f6f6f6",
+    "prod_thumb_detail_col": "#212b36",
+    "prod_thumb_detail_col_a": "#637381",
+    "prod_over_redu_text": "#c4293d",
+    "prod_over_redu_bg": "#ffffff",
+    "prod_over_low_text": "#808284",
+    "prod_over_low_bg": "#ffffff",
+    "prod_over_new_text": "#000000",
+    "prod_over_new_bg": "#ffe802",
+    "prod_label_sale_text": "#c4293d",
+    "prod_label_sold_text": "#000000",
+    "prod_label_pre_text": "#60a57e",
+    "cross_page_promo_bg": "#045052",
+    "cross_page_promo_color": "#ffffff",
+    "foot_bg_col": "#1a8b43",
+    "foot_text_col": "#ffffff",
+    "foot_heading_col": "#ffffff",
+    "foot_divider_col": "rgba(0,0,0,0)",
+    "type_heading_font": "ibm_plex_sans_n7",
+    "capitalize_headings": true,
+    "type_base_font": "cabin_n4",
+    "type_nav_font": "ibm_plex_sans_n6",
+    "type_logo_font": "helvetica_n7",
+    "font_size_heading_int": 22,
+    "font_size_base_int": 18,
+    "font_size_nav_int": 15,
+    "font_size_logo_int": 24,
+    "button_style": "normal",
+    "button_shape": "sharp",
+    "coll_grid_image_shape": "square",
+    "prod_thumb_shape": "square",
+    "prod_thumb_text_align": "left",
+    "prod_thumb_hover_image": true,
+    "quickbuy_style": "button",
+    "qb_show_description": true,
+    "enable_payment_button": true,
+    "prod_block_label_loc": "top center",
+    "prod_stock_warn_show": true,
+    "prod_stock_warn_limit_int": 10,
+    "prod_new_show": false,
+    "prod_new_method": "date",
+    "prod_new_limit_int": 100,
+    "prod_sale_show": true,
+    "prod_sold_out_show": true,
+    "variant_style": "listed",
+    "swatch_enabled": true,
+    "swatch_option_name": "Color",
+    "swatch_images": true,
+    "social_twitter_url": "",
+    "social_facebook_url": "https:\/\/www.facebook.com\/LifePo4Oz\/",
+    "social_instagram_url": "",
+    "search_type": "product,article,page",
+    "enable_live_search": true,
+    "live_search_show_vendor": false,
+    "live_search_show_price": false,
+    "live_search_search_meta": false,
+    "favicon": "shopify:\/\/shop_images\/fav.png",
+    "cart_type": "drawer",
+    "checkout_logo_image": "shopify:\/\/shop_images\/LIFEPO4OZ-LOGOS_02-RGB_V2.png",
+    "checkout_logo_size": "large",
+    "checkout_sidebar_background_color": "#8dc43c",
+    "checkout_button_color": "#1a8b43",
+    "sections": {
+      "header": {
+        "type": "header",
+        "blocks": {
+          "a6dfe93a-1174-4a75-a0ed-95b70c090d1d": {
+            "type": "menu-promotion",
+            "settings": {
+              "dropdown_link_title": "About",
+              "image": "shopify:\/\/shop_images\/silhouettes-of-wind-turbines.jpg",
+              "title": "something can go here",
+              "link_url": "shopify:\/\/pages\/about-us"
+            }
+          }
+        },
+        "block_order": [
+          "a6dfe93a-1174-4a75-a0ed-95b70c090d1d"
+        ],
+        "settings": {
+          "logo": "shopify:\/\/shop_images\/LIFEPO4OZ-LOGOS_01-RGB_-_V2.png",
+          "logo_img_width_int": 160,
+          "enable_sticky": true,
+          "menu_linklist": "main-menu",
+          "menu_layout": "inline-menu-center",
+          "nav_featured_link": "Sale",
+          "nav_mob_products_title": "Best Sellers",
+          "nav_mob_products_collection": "",
+          "search_suggestions_title": "",
+          "search_suggestions_menu": ""
+        }
+      },
+      "cross-page-promos": {
+        "type": "cross-page-promos",
+        "blocks": {
+          "ef4338f4-9781-4d4c-ad01-135a32762d7b": {
+            "type": "custom-icon",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/iconspsd-d.png",
+              "image_size": "icon",
+              "text": "Shipping",
+              "text2": "All orders are shipped via Road Freight.  As such there is not Express Shipping available.",
+              "link_url": ""
+            }
+          },
+          "443e8cbf-8f71-4547-a03d-9581e3046d31": {
+            "type": "custom-icon",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/iconspsd-c.png",
+              "image_size": "icon",
+              "text": "RETURNS",
+              "text2": "We aim to keep our customers happy and if you are unhappy with your items due to them being damaged or not as described, simply return them for a full refund.",
+              "link_url": ""
+            }
+          },
+          "16f380b2-362e-483c-8388-4961a26d2558": {
+            "type": "custom-icon",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/iconspsd-b.png",
+              "image_size": "icon",
+              "text": "Damaged Goods",
+              "text2": "Our aim is to provide high-quality products at an affordable price.  If you receive a product that is damaged, do not use the item.  Please inform us within 24 hours of receiving that product. We will replace the product as soon as possible without any charges.",
+              "link_url": ""
+            }
+          },
+          "ed8bb996-a56a-493c-a7f0-182f2b303be7": {
+            "type": "custom-icon",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/iconspsd-a.png",
+              "image_size": "icon",
+              "text": "REFUNDS",
+              "text2": "A refund will be provided if you have purchased an item that does not operate as described.   \n Once we have verified you claims we will offer a refund and pay for the return freight cost.",
+              "link_url": ""
+            }
+          }
+        },
+        "block_order": [
+          "ef4338f4-9781-4d4c-ad01-135a32762d7b",
+          "443e8cbf-8f71-4547-a03d-9581e3046d31",
+          "16f380b2-362e-483c-8388-4961a26d2558",
+          "ed8bb996-a56a-493c-a7f0-182f2b303be7"
+        ],
+        "settings": {
+          "visibility": "nothome"
+        }
+      },
+      "1478795901388": {
+        "type": "slideshow",
+        "blocks": {
+          "d7f94c8f-b8a1-4709-8a2d-31e23d1f5736": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Nomad-200-Camping.jpg",
+              "image_position": "bottom center",
+              "slide_link": "",
+              "subheading": "",
+              "title": "Clean\nSafe\nRenewable",
+              "title_size": 120,
+              "text": "",
+              "enlarge_text": false,
+              "button_label": "",
+              "text_alignment": "bottom left"
+            }
+          },
+          "1478795901388-1": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/DJI_0010.jpg",
+              "image_position": "top center",
+              "slide_link": "",
+              "subheading": "",
+              "title": "Saving the Environment",
+              "title_size": 120,
+              "text": "",
+              "enlarge_text": true,
+              "button_label": "",
+              "text_alignment": "bottom left"
+            }
+          },
+          "eddb9c75-a9bc-4523-880c-bf10409c8cd1": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/living-off-grid-how-to-live-off-the-grid-in-australia.png",
+              "image_position": "center center",
+              "slide_link": "",
+              "subheading": "",
+              "title": "We help you \ntake charge, \nanywhere",
+              "title_size": 90,
+              "text": "",
+              "enlarge_text": true,
+              "button_label": "",
+              "text_alignment": "bottom left"
+            }
+          }
+        },
+        "block_order": [
+          "d7f94c8f-b8a1-4709-8a2d-31e23d1f5736",
+          "1478795901388-1",
+          "eddb9c75-a9bc-4523-880c-bf10409c8cd1"
+        ],
+        "settings": {
+          "height": "fixed",
+          "height_desktop": 720,
+          "height_mobile": 420,
+          "full_width": true,
+          "mobile_overlay_under": false,
+          "overlay_style": "no_background",
+          "slide_transition": "fade",
+          "slide_navigation": "dots",
+          "autoplay": true,
+          "autoplay_speed": 7
+        }
+      },
+      "1480591889144": {
+        "type": "featured-collection",
+        "settings": {
+          "title": "LiFePo4 Cells",
+          "collection": "lifepo4-cells",
+          "show_vendor": false,
+          "enable_carousel": true,
+          "grid": 3,
+          "rows": 1,
+          "use_alt_bg": false,
+          "show_view_all": true,
+          "full_width": true
+        }
+      },
+      "1521034575223": {
+        "type": "image-with-text",
+        "settings": {
+          "image": "shopify:\/\/shop_images\/vi.gif",
+          "image_width": 400,
+          "subheading": "",
+          "title": "WHY CHOOSE LIFEPO4 BATTERIES?",
+          "text": "<p>The LiFePO4 Batteries offers a lot of benefits over other energy storage solutions. They have a longer lifespan, requiring next to no maintenance once setup.  They are regarded as one of the safest batteries, lightweight and have higher charged and discharged efficiency.<\/p><p>LiFePO4 cells can last up to 5000 cycles of charging and you can safely use 80% of their storage capacity without any degradation unlike other batteries.<br\/><br\/>These batteries come with high power density which means they are relatively light and small in size with higher usable storage capacity.  They have a faster-charging capability and better discharge rates make them a great choice motorhomes, caravans, 4WD’s, boats and Off-Grid Living.<\/p>",
+          "button_label": "Products Overview",
+          "button_link": "shopify:\/\/pages\/test-wide-template",
+          "button_style": "primary",
+          "image_position": "left",
+          "text_alignment": "left",
+          "use_alt_bg": true
+        }
+      },
+      "1521035976582": {
+        "type": "image-with-text",
+        "settings": {
+          "image": "shopify:\/\/shop_images\/map-illustration.png",
+          "image_width": 700,
+          "subheading": "",
+          "title": "Smart - Sustainable - Affordable",
+          "text": "<p>We founded LiFePO4 Oz with one goal in mind: providing a high-quality, smart, and reliable energy storage solutions for Australians. Our passion for helping people to store energy, save money while also preserving the environment drives us to discover and distribute emerging products.  One way we can achieve this is through helping people build their own Off Grid Battery banks with LiFePO4 Batteries and accessories.<\/p><p>​We know that working with new products can be sometimes difficult and uncomfortable, so we're here to simplify the whole experience. and distribute emerging products.<\/p>",
+          "button_label": "Read More About Us",
+          "button_link": "shopify:\/\/pages\/about-us",
+          "button_style": "primary",
+          "image_position": "right",
+          "text_alignment": "left",
+          "use_alt_bg": true
+        }
+      },
+      "1583244060103": {
+        "type": "featured-collection",
+        "settings": {
+          "title": "DC - DC Chargers",
+          "collection": "dc-dc-charger",
+          "show_vendor": false,
+          "enable_carousel": true,
+          "grid": 3,
+          "rows": 2,
+          "use_alt_bg": false,
+          "show_view_all": true,
+          "full_width": true
+        }
+      },
+      "footer": {
+        "type": "footer",
+        "blocks": {
+          "e2258c18-ebd7-4201-b29c-90d1810f9423": {
+            "type": "text",
+            "settings": {
+              "title": "",
+              "text": "",
+              "image": "shopify:\/\/shop_images\/LIFEPO4OZ-LOGOS_01-RGB_-_V2_bae2e720-cc63-4aab-b0d2-487ea65c9221.png",
+              "image_width": 160,
+              "show_social_icons": false,
+              "soc_icons_large": false
+            }
+          },
+          "1599638662124": {
+            "type": "text",
+            "settings": {
+              "title": "About LIFEPO4 OZ",
+              "text": "<p>We know that working with new products can be sometimes difficult and uncomfortable, so we're here to simplify the whole experience. and distribute emerging products.<\/p>",
+              "image_width": 170,
+              "show_social_icons": false,
+              "soc_icons_large": true
+            }
+          },
+          "1599639374976": {
+            "type": "menu",
+            "settings": {
+              "title": "Quick links",
+              "menu": "main-menu"
+            }
+          }
+        },
+        "block_order": [
+          "e2258c18-ebd7-4201-b29c-90d1810f9423",
+          "1599638662124",
+          "1599639374976"
+        ],
+        "settings": {
+          "lower_menu": "footer",
+          "show_payment_icons": false,
+          "show_locale_selector": false,
+          "show_currency_selector": false
+        }
+      },
+      "1595062506799": {
+        "type": "gallery",
+        "disabled": true,
+        "blocks": {
+          "1595062506799-0": {
+            "type": "image",
+            "settings": {
+              "alignment": "center center",
+              "enlarge_image": false,
+              "subheading": "Subheading",
+              "title": "Heading",
+              "button_label": "",
+              "link": "",
+              "text_alignment": "bottom left"
+            }
+          },
+          "1595062506799-1": {
+            "type": "image",
+            "settings": {
+              "alignment": "top center",
+              "enlarge_image": false,
+              "subheading": "Subheading",
+              "title": "Heading",
+              "button_label": "",
+              "link": "",
+              "text_alignment": "bottom left"
+            }
+          },
+          "f62733f1-2568-40b4-8912-6b896baea6f8": {
+            "type": "image",
+            "settings": {
+              "alignment": "center center",
+              "enlarge_image": false,
+              "subheading": "Subheading",
+              "title": "Heading",
+              "button_label": "",
+              "link": "",
+              "text_alignment": "center center"
+            }
+          }
+        },
+        "block_order": [
+          "1595062506799-0",
+          "1595062506799-1",
+          "f62733f1-2568-40b4-8912-6b896baea6f8"
+        ],
+        "settings": {
+          "grid": 3,
+          "desktop_image_height": 480,
+          "mobile_image_height": 480,
+          "enable_margin": true,
+          "full_width": false,
+          "use_alt_bg": false,
+          "enable_carousel": true,
+          "overlay_style": "box",
+          "button_style": "link"
+        }
+      },
+      "1595063270897": {
+        "type": "background-video",
+        "disabled": true,
+        "settings": {
+          "video": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
+          "subheading": "",
+          "title": "Background video",
+          "title_size": 150,
+          "text": "<p>Use a video to get a customer's attention<\/p>",
+          "enlarge_text": true,
+          "button_label": "",
+          "button_link": "",
+          "text_alignment": "top left",
+          "height_desktop": 800,
+          "height_mobile": 500,
+          "full_width": true,
+          "overlay_style": "no_background"
+        }
+      },
+      "1595065871135": {
+        "type": "gallery",
+        "blocks": {
+          "1595065871135-0": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/balkan-campers-0M7Z6WTi-1M-unsplash.jpg",
+              "alignment": "bottom center",
+              "enlarge_image": true,
+              "subheading": "LiFePO4 batteries will help you to avoid the need to lug around noisy, dirty, generators for your camping trip.  With these batteries, you can get light anytime, quickly and easily.",
+              "title": "Camping",
+              "button_label": "",
+              "link": "",
+              "text_alignment": "top center"
+            }
+          },
+          "1595065871135-1": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/thoreau.jpg",
+              "alignment": "bottom center",
+              "enlarge_image": true,
+              "subheading": "Sailing the open waters is all about being disconnected.  Using LiFePO4 batteries onboard means you can still be connected to power without the weight, hassles that other energy storage comes with.",
+              "title": "Cruising",
+              "button_label": "",
+              "link": "",
+              "text_alignment": "top center"
+            }
+          },
+          "1595065871135-2": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/the-best-luxury-glamping-getaways-near-brisbane.thumb.800.480.jpg",
+              "alignment": "center center",
+              "enlarge_image": true,
+              "subheading": "Being offgrid is not only about freedom of needing to be plugged in but is also about environmental responsibility.  With LiFePO4 batteries you can access to all the modern luxuries while also storing your harvested energy with environmentally friend batteries.",
+              "title": "OFF GRID LIVING",
+              "button_label": "",
+              "link": "",
+              "text_alignment": "top center"
+            }
+          }
+        },
+        "block_order": [
+          "1595065871135-0",
+          "1595065871135-1",
+          "1595065871135-2"
+        ],
+        "settings": {
+          "grid": 3,
+          "desktop_image_height": 600,
+          "mobile_image_height": 520,
+          "enable_margin": false,
+          "full_width": true,
+          "use_alt_bg": false,
+          "enable_carousel": true,
+          "overlay_style": "box",
+          "button_style": "link"
+        }
+      },
+      "product-template": {
+        "type": "product-template",
+        "settings": {
+          "show_tax_and_shipping": true,
+          "show_vendor": false,
+          "show_sku": false,
+          "show_quantity_selector": true,
+          "enable_payment_button": true,
+          "show_pickup_availability": true,
+          "show_backorder_text": true,
+          "show_inventory_notice": true,
+          "inventory_notice_threshold": 10,
+          "inventory_transfers_enable": true,
+          "show_sharing_links": true,
+          "gallery_size": "medium",
+          "prod_gall_thumbs_under": "under",
+          "enable_sticky_gallery": true,
+          "enable_zoom": true,
+          "enable_video_looping": false,
+          "description_location": "beside",
+          "accordion_description_collapsed": true,
+          "accordion_item1_page": "return-and-refund-policy",
+          "accordion_item2_page": "shipping-info",
+          "accordion_item3_page": ""
+        }
+      },
+      "product-recommendations": {
+        "type": "product-recommendations",
+        "settings": {
+          "show_product_recommendations": true,
+          "title": "You may also like",
+          "show_vendor": false,
+          "grid": 4
+        }
+      },
+      "1595067713114": {
+        "type": "gallery",
+        "disabled": true,
+        "blocks": {
+          "1595067713114-0": {
+            "type": "image",
+            "settings": {
+              "alignment": "center center",
+              "enlarge_image": false,
+              "subheading": "Subheading",
+              "title": "Heading",
+              "button_label": "",
+              "link": "",
+              "text_alignment": "center center"
+            }
+          },
+          "1595067713114-1": {
+            "type": "image",
+            "settings": {
+              "alignment": "center center",
+              "enlarge_image": false,
+              "subheading": "Subheading",
+              "title": "Heading",
+              "button_label": "",
+              "link": "",
+              "text_alignment": "center center"
+            }
+          },
+          "1595067713114-2": {
+            "type": "image",
+            "settings": {
+              "alignment": "center center",
+              "enlarge_image": false,
+              "subheading": "Subheading",
+              "title": "Heading",
+              "button_label": "",
+              "link": "",
+              "text_alignment": "center center"
+            }
+          }
+        },
+        "block_order": [
+          "1595067713114-0",
+          "1595067713114-1",
+          "1595067713114-2"
+        ],
+        "settings": {
+          "grid": 3,
+          "desktop_image_height": 300,
+          "mobile_image_height": 400,
+          "enable_margin": false,
+          "full_width": true,
+          "use_alt_bg": false,
+          "enable_carousel": true,
+          "overlay_style": "full",
+          "button_style": "primary"
+        }
+      },
+      "collection-template": {
+        "type": "collection-template",
+        "settings": {
+          "show_image_behind_heading": true,
+          "heading_image_height": "medium",
+          "coll_num_per_page_int": 16,
+          "grid": 3,
+          "show_vendor": false,
+          "show_total": false,
+          "coll_desc_pos": "above",
+          "ajax_products": true,
+          "coll_show_sort": true,
+          "coll_show_feat": true,
+          "tag_filtering": "simple",
+          "collapse_tag_sidebar_by_default": false,
+          "subcoll_menu": "main-menu",
+          "subcoll_style": "buttons",
+          "subcoll_gall_shape": "sq",
+          "image_position": "center center",
+          "subcoll_gall_enable_margin": false,
+          "subcoll_gall_full_width": false,
+          "subcoll_gall_overlay_style": "full",
+          "subcoll_gall_text_alignment": "center center",
+          "subcoll_gall_mobile_layout": "2"
+        }
+      },
+      "page-story-template": {
+        "type": "page-story-template",
+        "blocks": {
+          "193f5f2b-75ed-47c4-92a5-61c6ffb8ada7": {
+            "type": "image-with-text-overlay",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/sunrise-campers-mark-harpur.jpg",
+              "image_position": "bottom left",
+              "height": "adapt",
+              "height_desktop": 600,
+              "height_mobile": 500,
+              "subheading": "",
+              "title": "About Us",
+              "title_size": 70,
+              "text": "",
+              "enlarge_text": true,
+              "button_label": "",
+              "image_link": "",
+              "text_alignment": "center left",
+              "full_width": true,
+              "mobile_overlay_under": false,
+              "overlay_style": "no_background"
+            }
+          },
+          "1595320256561": {
+            "type": "image-with-text",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/17544774.jpg",
+              "image_width": 700,
+              "subheading": "About",
+              "title": "Smart - Sustainable - Affordable",
+              "text": "<p>We founded LiFePO4 Oz with one goal in mind: providing a high-quality, smart, and reliable energy storage solutions for Australians. <\/p><p>Our passion for helping people to store energy, save money while also preserving the environment drives us to discover and distribute emerging products.  <\/p><p>One way we can achieve this is through helping people build their own Off Grid Battery banks with LiFePO4 Batteries and accessories.<\/p>",
+              "button_label": "",
+              "button_link": "",
+              "button_style": "primary",
+              "image_position": "left",
+              "text_alignment": "left",
+              "use_alt_bg": false
+            }
+          },
+          "e1a83cc0-a661-4de9-916d-6d41bf8dc302": {
+            "type": "rich-text",
+            "settings": {
+              "subheading": "",
+              "title": "",
+              "text": "<p>​We know that working with new products can be sometimes difficult and uncomfortable, so we're here to simplify the whole experience. and distribute emerging products.<\/p>",
+              "button_label": "View Our Products",
+              "button_link": "shopify:\/\/collections\/all",
+              "button_style": "primary",
+              "height": "medium",
+              "text_alignment": "center",
+              "enlarge_text": false,
+              "full_width": false,
+              "use_alt_bg": false
+            }
+          },
+          "1595321461928": {
+            "type": "image-with-text",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/clearwater-island-lodge.jpg",
+              "image_width": 700,
+              "subheading": "",
+              "title": "Because We Care",
+              "text": "<p>At LifePo4 Oz, we want to give our customers the most enjoyable shopping experience, one that will keep them coming back to our store time and time again. <\/p><p>That’s why we believe that our store policies should be fair, clear and transparent. Below you’ll find a list of all our policies. <\/p><p>If you can’t find the information you’re looking for - please don’t hesitate to contact us today!<\/p>",
+              "button_label": "Contact Us",
+              "button_link": "",
+              "button_style": "primary",
+              "image_position": "left",
+              "text_alignment": "left",
+              "use_alt_bg": true
+            }
+          }
+        },
+        "block_order": [
+          "193f5f2b-75ed-47c4-92a5-61c6ffb8ada7",
+          "1595320256561",
+          "e1a83cc0-a661-4de9-916d-6d41bf8dc302",
+          "1595321461928"
+        ],
+        "settings": {
+          "show_page_content": false
+        }
+      },
+      "announcement-bar": {
+        "type": "announcement-bar",
+        "settings": {
+          "announcement_show": true,
+          "announcement_text": "FREE Shipping Australia-wide",
+          "announcement_link": "",
+          "announcement_bar_col": "#000000",
+          "announcement_text_col": "#ffffff",
+          "show_social_icons": true,
+          "menu": "",
+          "show_locale_selector": true,
+          "show_currency_selector": true
+        }
+      },
+      "store-messages": {
+        "type": "store-messages",
+        "blocks": {
+          "1599495506123": {
+            "type": "message",
+            "settings": {
+              "heading": "Saving Energy",
+              "subheading": "",
+              "link_url": ""
+            }
+          },
+          "1599495565638": {
+            "type": "message",
+            "settings": {
+              "heading": "Saving Money",
+              "subheading": "",
+              "link_url": ""
+            }
+          },
+          "1599495573176": {
+            "type": "message",
+            "settings": {
+              "heading": "Saving the Environment",
+              "subheading": "",
+              "link_url": ""
+            }
+          }
+        },
+        "block_order": [
+          "1599495506123",
+          "1599495565638",
+          "1599495573176"
+        ],
+        "settings": {
+          "head_not_home_only": true,
+          "head_not_mob_show": true,
+          "head_not_mob_text": "FREE SHIPPING ON ORDERS $35+",
+          "head_not_mob_url": ""
+        }
+      },
+      "search-template": {
+        "type": "search-template",
+        "settings": {
+          "show_vendor": false,
+          "coll_num_per_page_int": 24,
+          "grid": 4
+        }
+      },
+      "article-template": {
+        "type": "article-template",
+        "settings": {
+          "show_featured_image": true,
+          "show_date": true,
+          "show_author": true,
+          "show_article_tags": true,
+          "show_sharing_icons": true
+        }
+      },
+      "1605867395e9326332": {
+        "type": "featured-blog",
+        "disabled": true,
+        "settings": {
+          "title": "Blog posts",
+          "blog": "",
+          "post_limit": 3,
+          "show_author": true,
+          "show_date": true,
+          "crop_ratio": "1.78"
+        }
+      },
+      "popup": {
+        "type": "popup",
+        "settings": {
+          "mode": "disabled",
+          "popup_delay_seconds": 4,
+          "popup_dismiss_for_days": 2,
+          "position": "bottom-right",
+          "title": "Sign up and save",
+          "text": "<p>Entice customers to sign up for your mailing list with discounts or exclusive offers.<\/p>",
+          "image": "shopify:\/\/shop_images\/the-best-luxury-glamping-getaways-near-brisbane.thumb.800.480.jpg",
+          "show_newsletter": true,
+          "show_social_icons": true
+        }
+      },
+      "1611656731e8ac3466": {
+        "type": "testimonials",
+        "blocks": {
+          "1611656731e8ac3466-0": {
+            "type": "testimonial",
+            "settings": {
+              "star_rating": 5,
+              "testimonial": "I purchased 4 x 200ah Lithium batteries from LiFePO4 Oz for one of my projects and they are better than described.  They have so far outperformed any of my previous AGM\/Lead-acid batteries with around 10ah above the rated capacity.  Highly Recommended",
+              "author": "John - Bunbury, WA",
+              "image_alignment": "top center",
+              "image_caption": "",
+              "link": ""
+            }
+          },
+          "1611656731e8ac3466-1": {
+            "type": "testimonial",
+            "settings": {
+              "star_rating": 5,
+              "testimonial": "We setup a 24V system using these LiFePO4 batteries to power my household items like fridge\/freezer, lights and TV and although it was a little pricy to begin with, we’ve well and truly got our monies worth.  Last week our neighbours had a blackout and we didn’t even know except for all the houses in the street were dark except for ours.",
+              "author": "Garry & Donna - Croydon, VIC",
+              "image_alignment": "center center",
+              "image_caption": "",
+              "link": ""
+            }
+          },
+          "3692a539-0c9c-4b42-95e9-0545f775d76b": {
+            "type": "testimonial",
+            "settings": {
+              "star_rating": 5,
+              "testimonial": "I brought 3 x 24V 200ah Kits for our 40ft motorhome which we travel around Australia full time.  The 200ah cells are half the weight, take up less space and hold more charge than our old AGM batteries.  Will never buy another AGM again….",
+              "author": "Michael - Harvey Bay, QLD",
+              "image_alignment": "center center",
+              "image_caption": "",
+              "link": ""
+            }
+          },
+          "9f6dcfc6-bb65-46c3-a5f7-2c267c76e46a": {
+            "type": "testimonial",
+            "settings": {
+              "star_rating": 5,
+              "testimonial": "Highly recommend LiFePO4 Oz…..  I brought a full set up from including 300ah cells, BMS and Inverter which we now use in our Motorhome.  I looked at other LiFePO4 sealed batteries and found that the individual cells are better for longevity and maintenance.  These guys not only shipped it to me within 2 days but they also were happy to answer any questions I had when setting it up.",
+              "author": "Sharon - Wollongong, NSW",
+              "image_alignment": "center center",
+              "image_caption": "",
+              "link": ""
+            }
+          }
+        },
+        "block_order": [
+          "1611656731e8ac3466-0",
+          "1611656731e8ac3466-1",
+          "3692a539-0c9c-4b42-95e9-0545f775d76b",
+          "9f6dcfc6-bb65-46c3-a5f7-2c267c76e46a"
+        ],
+        "settings": {
+          "title": "Customer reviews",
+          "layout": "no-image",
+          "image_shape": "landscape",
+          "use_alt_bg": false
+        }
+      },
+      "16238387842cbaa5e0": {
+        "type": "text-columns-with-images",
+        "blocks": {
+          "16238387842cbaa5e0-0": {
+            "type": "text_block",
+            "settings": {
+              "enable_image": true,
+              "image": "shopify:\/\/shop_images\/icon-safe-w.png",
+              "image_width": 200,
+              "title": "SAFER",
+              "text": "<p>Unlike other Lithium batteries, LiFePO4 cells are different as they contain phosphate crystals and therefore are unlikely to deteriorate or become unstable when overcharged.  It means they are far less likely to explode or catch fire unexpectedly.<\/p>",
+              "button_label": "",
+              "link": ""
+            }
+          },
+          "16238387842cbaa5e0-1": {
+            "type": "text_block",
+            "settings": {
+              "enable_image": true,
+              "image": "shopify:\/\/shop_images\/icon-feather-w.png",
+              "image_width": 200,
+              "title": "LESS WEIGHT",
+              "text": "<p>Put simply, LiFePO4 cells can store more energy with less weight over other energy storage technologies.  This makes them ideal for Caravans, Motorhomes or marine applications.<\/p>",
+              "button_label": "",
+              "link": ""
+            }
+          },
+          "16238387842cbaa5e0-2": {
+            "type": "text_block",
+            "settings": {
+              "enable_image": true,
+              "image": "shopify:\/\/shop_images\/icon-battery-w.png",
+              "image_width": 200,
+              "title": "LONGER LIFE WITH HIGHER CHARGE CYCLES",
+              "text": "<p>LiFePO4 Batteries have more charge cycles than other batteries it means your batteries will last longer saving you money on replacement costs.<\/p>",
+              "button_label": "",
+              "link": ""
+            }
+          },
+          "d088244a-39ba-4701-8088-9e17c0326f10": {
+            "type": "text_block",
+            "settings": {
+              "enable_image": true,
+              "image": "shopify:\/\/shop_images\/icon-earth-w.png",
+              "image_width": 200,
+              "title": "MORE ENVIRONMENTALLY FRIENDLY",
+              "text": "<p>As LiFePO4 batteries don't use rare or toxic metals and because they last longer they are considered to be more environmentally friendly than other battery technologies.<\/p>",
+              "button_label": "",
+              "link": ""
+            }
+          },
+          "2824c692-4373-4252-8ea6-113efc0f540a": {
+            "type": "text_block",
+            "settings": {
+              "enable_image": true,
+              "image": "shopify:\/\/shop_images\/icon-brain-w.png",
+              "image_width": 200,
+              "title": "NO BATTERY MEMORY EFFECT",
+              "text": "<p>Battery Memory effect is when the storage capacity of a battery reduces each time the battery cycles through being charged and then discharged.  Unlike Nickel-Cadmium and Nickel–metal Hydride batteries, LiFePO4 cells maintain their storage capacity over time.<\/p>",
+              "button_label": "",
+              "link": ""
+            }
+          },
+          "67861b6f-243f-4546-be16-da8d051b8c29": {
+            "type": "text_block",
+            "settings": {
+              "enable_image": true,
+              "image": "shopify:\/\/shop_images\/icon-cycle-w.png",
+              "image_width": 200,
+              "title": "HIGHER CHARGING \/ DISCHARGE RATES",
+              "text": "<p>The rate in which you can charge or discharge LiFePO4 batteries is much higher than other battery technologies.  This means the batteries are more flexible with how quickly you can use the energy stored while reducing the amount of time to replenish the energy stored.  Perfect if you're storing energy harvested from solar or wind.<\/p>",
+              "button_label": "",
+              "link": ""
+            }
+          }
+        },
+        "block_order": [
+          "16238387842cbaa5e0-0",
+          "16238387842cbaa5e0-1",
+          "16238387842cbaa5e0-2",
+          "d088244a-39ba-4701-8088-9e17c0326f10",
+          "2824c692-4373-4252-8ea6-113efc0f540a",
+          "67861b6f-243f-4546-be16-da8d051b8c29"
+        ],
+        "settings": {
+          "title": "WHY CHOOSE LIFEPO4 BATTERIES?",
+          "text_alignment": "center",
+          "button_style": "primary",
+          "use_alt_bg": true
+        }
+      },
+      "product-story": {
+        "type": "product-story",
+        "settings": {}
+      },
+      "cart-template": {
+        "type": "cart-template",
+        "settings": {
+          "enable_cart_notes": false,
+          "show_tax_and_shipping": true,
+          "cart_terms_page": "",
+          "show_additional_checkout_buttons": true,
+          "show_backorder_text": true,
+          "show_shipping_calculator": false,
+          "shipping_calculator_default_country": "United States"
+        }
+      },
+      "16239104708aa6e090": {
+        "type": "text-columns-with-images",
+        "disabled": true,
+        "blocks": {
+          "16239104708aa6e090-0": {
+            "type": "text_block",
+            "settings": {
+              "enable_image": true,
+              "image_width": 700,
+              "title": "Quality",
+              "text": "<p>Manufactured using the latest technology and stringent quality control, our battery products are designed to exceed in performance and reliability. <\/p>",
+              "button_label": "",
+              "link": ""
+            }
+          },
+          "16239104708aa6e090-1": {
+            "type": "text_block",
+            "settings": {
+              "enable_image": true,
+              "image_width": 700,
+              "title": "Experience",
+              "text": "<p>Our focused approach to exceptional end to end customer experience sets us apart from the competition. From enquiry to delivery and everything in-between we regularly exceed our customers’ expectations.<\/p>",
+              "button_label": "",
+              "link": ""
+            }
+          },
+          "16239104708aa6e090-2": {
+            "type": "text_block",
+            "settings": {
+              "enable_image": true,
+              "image_width": 700,
+              "title": "Service",
+              "text": "<p><br\/>                Delivery on time, every time to customer specifications. We pride ourselves on offering tailored service solutions to meet our customers' exact specifications.            <\/p>",
+              "button_label": "",
+              "link": ""
+            }
+          }
+        },
+        "block_order": [
+          "16239104708aa6e090-0",
+          "16239104708aa6e090-1",
+          "16239104708aa6e090-2"
+        ],
+        "settings": {
+          "title": "LifePo4 Oz Promises",
+          "text_alignment": "center",
+          "button_style": "primary",
+          "use_alt_bg": true
+        }
+      },
+      "16239107683074d770": {
+        "type": "image-with-text-overlay",
+        "disabled": true,
+        "settings": {
+          "image": "shopify:\/\/shop_images\/cleaninn.png",
+          "image_position": "center center",
+          "height": "adapt",
+          "height_desktop": 600,
+          "height_mobile": 500,
+          "subheading": "",
+          "title": "FIND THE RIGHT BATTERY FOR YOUR APPLICATION",
+          "title_size": 70,
+          "text": "<p>Our range of batteries are designed and manufactured using the latest technology and state-of the art equipment to ensure that they met the unique demands of each application.<\/p>",
+          "enlarge_text": true,
+          "button_label": "THIS IS A BUTTON",
+          "image_link": "",
+          "text_alignment": "center left",
+          "full_width": false,
+          "mobile_overlay_under": true,
+          "overlay_style": "full"
+        }
+      },
+      "16239121788b852109": {
+        "type": "custom-row",
+        "disabled": true,
+        "blocks": {
+          "bb4a8eb7-5dd5-4066-926d-c7c48cec7542": {
+            "type": "html",
+            "settings": {
+              "width": "full",
+              "code": "<div class=\"one-quarter-column\">\n<p>Insert the content for the left column here.<\/p>\n<\/div>\n<div class=\"one-quarter-column\">\n<p>Insert the content for the left column here.<\/p>\n<\/div>\n<div class=\"one-quarter-column\">\n<p>Insert the content for the left column here.<\/p>\n<\/div>\n<div class=\"one-quarter-column-last\">\n<p>Insert the content for the left column here.<\/p>\n<\/div>\n\n\n\n<style>\n.one-quarter-column {\nwidth:23%;\nmargin-right:2%;\nfloat:left;\n}\n.one-quarter-column-last {\nwidth:23%;\nmargin-right:0;\nfloat:right;\n}\n\n@media only screen and (max-width: 600px) {\n.one-half-column-left, .one-half-column-right, \n.one-third-column, .one-third-column-last {\nfloat:none;\nwidth:100%;\nmargin-right:0;\n}\n}\n<\/style>"
+            }
+          }
+        },
+        "block_order": [
+          "bb4a8eb7-5dd5-4066-926d-c7c48cec7542"
+        ],
+        "settings": {
+          "alignment": "middle"
+        }
+      },
+      "16239956920d57625c": {
+        "type": "custom-row",
+        "disabled": true,
+        "blocks": {
+          "16239956920d57625c-0": {
+            "type": "image",
+            "settings": {
+              "width": "half",
+              "image_position": "center center",
+              "height": "adapt",
+              "height_desktop": 600,
+              "height_mobile": 500,
+              "subheading": "Subheading",
+              "title": "Tell your story",
+              "text": "<p>Pair text with an image to tell a story<\/p>",
+              "enlarge_text": false,
+              "button_label": "",
+              "image_link": "",
+              "text_alignment": "center center",
+              "mobile_overlay_under": false,
+              "overlay_style": "full"
+            }
+          },
+          "16239956920d57625c-1": {
+            "type": "text",
+            "settings": {
+              "width": "half",
+              "subheading": "",
+              "title": "THE POWER TO BE IN CHARGE",
+              "text": "<p>Use this text to share information about your store with your customers.<\/p><p>Describe products, share announcements, or welcome customers to your store.<\/p>",
+              "button_label": "",
+              "button_link": "",
+              "button_style": "primary",
+              "text_alignment": "center"
+            }
+          }
+        },
+        "block_order": [
+          "16239956920d57625c-0",
+          "16239956920d57625c-1"
+        ],
+        "settings": {
+          "alignment": "middle"
+        }
+      },
+      "1623995833611a41fb": {
+        "type": "slideshow",
+        "blocks": {
+          "1623995833611a41fb-0": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/balkan-campers-0M7Z6WTi-1M-unsplash.jpg",
+              "image_position": "center center",
+              "slide_link": "shopify:\/\/pages\/test-wide-template",
+              "subheading": "",
+              "title": "THE POWER TO \nBE IN CHARGE",
+              "title_size": 102,
+              "text": "<p>Travelling on the road is all about freedom... so don't limit yourself with where you can set up camp without access to those creature comforts.<\/p>",
+              "enlarge_text": true,
+              "button_label": "Learn More",
+              "text_alignment": "center left"
+            }
+          },
+          "1623995833611a41fb-1": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/the-best-luxury-glamping-getaways-near-brisbane.thumb.800.480.jpg",
+              "image_position": "center center",
+              "slide_link": "shopify:\/\/collections\/all",
+              "subheading": "",
+              "title": "FIND THE RIGHT BATTERY FOR YOUR APPLICATION",
+              "title_size": 68,
+              "text": "<p>Our range of batteries are designed and manufactured using the latest technology and state-of the art equipment to ensure that they met the unique demands of each application.<\/p>",
+              "enlarge_text": true,
+              "button_label": "View Our Products",
+              "text_alignment": "center left"
+            }
+          }
+        },
+        "block_order": [
+          "1623995833611a41fb-0",
+          "1623995833611a41fb-1"
+        ],
+        "settings": {
+          "height": "adapt",
+          "height_desktop": 600,
+          "height_mobile": 500,
+          "full_width": true,
+          "mobile_overlay_under": false,
+          "overlay_style": "full",
+          "slide_transition": "fade",
+          "slide_navigation": "arrows",
+          "autoplay": true,
+          "autoplay_speed": 7
+        }
+      },
+      "1623997059a664425b": {
+        "type": "rich-text",
+        "settings": {
+          "subheading": "",
+          "title": "ADVENTURE BEGINS HERE",
+          "text": "<p>Our mission is to find new and exciting ways to extend the use of ‘off -grid’ solar solutions to power our everyday lives<\/p>",
+          "button_label": "",
+          "button_link": "",
+          "button_style": "primary",
+          "height": "small",
+          "text_alignment": "center",
+          "enlarge_text": false,
+          "full_width": true,
+          "use_alt_bg": true
+        }
+      },
+      "1624262676d17cd286": {
+        "type": "collection-list",
+        "disabled": true,
+        "blocks": {
+          "11a22da3-fd7b-46c7-9c47-df8a570aa49e": {
+            "type": "collection",
+            "settings": {
+              "collection": "battery-boxes"
+            }
+          },
+          "87c18af5-e2f8-4296-9e2d-e7f0b8083ca9": {
+            "type": "collection",
+            "settings": {
+              "collection": "battery-management-systems-bms"
+            }
+          },
+          "5f3ab954-115f-4176-829c-5d574879dd20": {
+            "type": "collection",
+            "settings": {
+              "collection": "lifepo4-cells"
+            }
+          }
+        },
+        "block_order": [
+          "11a22da3-fd7b-46c7-9c47-df8a570aa49e",
+          "87c18af5-e2f8-4296-9e2d-e7f0b8083ca9",
+          "5f3ab954-115f-4176-829c-5d574879dd20"
+        ],
+        "settings": {
+          "title": "Discover our Product range",
+          "enable_carousel": true,
+          "grid": 3,
+          "use_alt_bg": false,
+          "full_width": true
+        }
+      },
+      "1624262768dc7b2b97": {
+        "type": "collection-list",
+        "blocks": {
+          "8f89c913-8e31-43c9-aaca-2ffc7080c787": {
+            "type": "collection",
+            "settings": {
+              "collection": "lifepo4-cells"
+            }
+          },
+          "6fdccc28-53d3-4c8b-9bad-a90553922326": {
+            "type": "collection",
+            "settings": {
+              "collection": "lifepo4-battery-kits"
+            }
+          },
+          "02577697-77bf-4ac2-8a8c-16df0127fde8": {
+            "type": "collection",
+            "settings": {
+              "collection": "battery-boxes"
+            }
+          },
+          "1e4d0989-6bdb-4737-907a-cf339e8ec5d3": {
+            "type": "collection",
+            "settings": {
+              "collection": "dc-dc-charger"
+            }
+          },
+          "c72cf50b-9b4b-4d15-a9e1-914dadb50923": {
+            "type": "collection",
+            "settings": {
+              "collection": "inverters"
+            }
+          },
+          "43f27cd2-8c18-42f9-89a8-d4b1501bb67b": {
+            "type": "collection",
+            "settings": {
+              "collection": "solar-charge-controllers"
+            }
+          },
+          "65e5b64d-44bb-447d-b464-5fa2e646e3c3": {
+            "type": "collection",
+            "settings": {
+              "collection": "battery-management-systems-bms"
+            }
+          }
+        },
+        "block_order": [
+          "8f89c913-8e31-43c9-aaca-2ffc7080c787",
+          "6fdccc28-53d3-4c8b-9bad-a90553922326",
+          "02577697-77bf-4ac2-8a8c-16df0127fde8",
+          "1e4d0989-6bdb-4737-907a-cf339e8ec5d3",
+          "c72cf50b-9b4b-4d15-a9e1-914dadb50923",
+          "43f27cd2-8c18-42f9-89a8-d4b1501bb67b",
+          "65e5b64d-44bb-447d-b464-5fa2e646e3c3"
+        ],
+        "settings": {
+          "title": "Cells and Accessories",
+          "enable_carousel": true,
+          "grid": 4,
+          "use_alt_bg": false,
+          "full_width": true
+        }
+      },
+      "faq-template": {
+        "type": "faq-template",
+        "blocks": {
+          "81aebe8e-2f37-461f-bde2-61ef66666de7": {
+            "type": "question",
+            "settings": {
+              "title": "Will these batteries work with my existing Charge Controller\/Inverter?",
+              "answer": "<p>Yes, but ideally you should have equipment that are compatible with Lithium\/LiFePO4 cells.  It will work, and having a good quality BMS<br\/>will protect the cells, however having equipment suited to LiFePO4 cells means you will extend the lifespan of your cells.<\/p>"
+            }
+          },
+          "4aa08efc-6634-4087-a0b8-782b71a1b7b1": {
+            "type": "question",
+            "settings": {
+              "title": "How many cells do I need to become fully off-grid?",
+              "answer": "<p>The answer to this has several variables such as, how much energy are you consuming, the amount of charge your putting back into the battery bank and what is the peak current being drawn at anyone time.  The answer to all these questions will<br\/>determine how many cells you need.  Best thing to do is (if possible) measure the amount of energy (Watts) you’re consuming<br\/>over the typical day with a Watt Meter. This will give you an idea of how much energy you’re consuming and somewhat determine how many\/type of cells you’ll need plus an idea of what solar\/turbine\/grid power source you’ll need to recharge your battery bank.<\/p>"
+            }
+          },
+          "a80b7bec-6247-4811-858a-6d7eba8a8b7f": {
+            "type": "question",
+            "settings": {
+              "title": "Can I run LiFePO4 cells without a Battery Management System (BMS)?",
+              "answer": "<p>The short answer is “YES”, but its not advisable.  A BMS is used to ensure that cells within a battery bank is kept balanced or in other words the voltage of each cell is kept somewhat level.  A good BMS will also protect the longevity of the LiFePO4 cells against overcharging or over-discharging plus too much current being drawn.<\/p>"
+            }
+          },
+          "db280ebd-1446-4372-9c4d-9d18df81ac89": {
+            "type": "question",
+            "settings": {
+              "title": "What is the different between LiFePO4 Cells and a LiFePO4 Sealed Battery?",
+              "answer": "<p>A LiFePO4 sealed battery is simply a battery box with individual LiFePO4 cells and a BMS inside to achieve the voltage of the total pack.  For example, a 12V LiFePO4 sealed battery will still have 4 x 3.2volt cells connected in series to achieve 12V (Or actually 12.8V).  The key benefit of sealed LiFePO4 cells are they are plug and play, no need to connect cells or the BMS unlike if you buy individual cells.  The negative is you don’t actually know what’s inside the sealed battery pack, if the cells are A Grade or used (B Grade) or the type\/quality of the BMS.  The major negative is that if one of the cells connected in series is to fail, the whole pack will stop working and you’ll need to replace the whole unit, whereas you can simply replace a single cell if you’re you’ve got a battery pack built from individual cells.<\/p>"
+            }
+          }
+        },
+        "block_order": [
+          "81aebe8e-2f37-461f-bde2-61ef66666de7",
+          "4aa08efc-6634-4087-a0b8-782b71a1b7b1",
+          "a80b7bec-6247-4811-858a-6d7eba8a8b7f",
+          "db280ebd-1446-4372-9c4d-9d18df81ac89"
+        ],
+        "settings": {
+          "show_search": true,
+          "show_index": true,
+          "index_heading": "How can we help?",
+          "header_image": "shopify:\/\/shop_images\/banner-about.jpg",
+          "heading_image_height": "huge",
+          "header_title": "frequently asked questions",
+          "header_text": "",
+          "show_contact": true,
+          "contact_heading": "Get in touch",
+          "contact_subheading": "Have questions about your order, or a general enquiry?",
+          "contact_button_label": "Contact Us",
+          "contact_button_url": "shopify:\/\/pages\/contact-us"
+        }
+      },
+      "162452139656826702": {
+        "type": "newsletter",
+        "disabled": true,
+        "settings": {
+          "title": "Subscribe to our newsletter",
+          "subheading": "<p>Promotions, new products and sales. Directly to your inbox.<\/p>",
+          "color_bg": "#1a8b43"
+        }
+      },
+      "16252019460a9c5c00": {
+        "type": "featured-collection",
+        "settings": {
+          "title": "Inverters",
+          "collection": "inverters",
+          "show_vendor": false,
+          "enable_carousel": true,
+          "grid": 4,
+          "rows": 1,
+          "use_alt_bg": false,
+          "show_view_all": true,
+          "full_width": true
+        }
+      },
+      "1625202026bea97ca3": {
+        "type": "rich-text",
+        "settings": {
+          "subheading": "",
+          "title": "Going outdoors something",
+          "text": "<p>LiFePO4 Batteries are the new and superior way to store energy.  LiFePO4 cells have a number of benefits over other technologies such as being lighter, have more usable storage  capacity and can be charged\/discharged much faster.  Check out the cells plus accessories below.<\/p>",
+          "button_label": "View All Products",
+          "button_link": "shopify:\/\/collections\/all",
+          "button_style": "primary",
+          "height": "small",
+          "text_alignment": "center",
+          "enlarge_text": false,
+          "full_width": false,
+          "use_alt_bg": true
+        }
+      },
+      "page-list-collections-template": {
+        "type": "page-list-collections-template",
+        "settings": {
+          "grid": 4
+        }
+      },
+      "page-overview-template": {
+        "type": "page-overview-template",
+        "blocks": {
+          "bb17529e-3344-4873-bdf3-18418aa6dd62": {
+            "type": "image-with-text-overlay",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Intro-1.jpg",
+              "image_position": "bottom center",
+              "height": "fixed",
+              "height_desktop": 460,
+              "height_mobile": 500,
+              "subheading": "",
+              "title": "Products",
+              "title_size": 94,
+              "text": "",
+              "enlarge_text": true,
+              "button_label": "",
+              "image_link": "",
+              "text_alignment": "center center",
+              "full_width": true,
+              "mobile_overlay_under": false,
+              "overlay_style": "full"
+            }
+          },
+          "e136d41f-5271-4e92-8398-6e7de14d4fcd": {
+            "type": "rich-text",
+            "settings": {
+              "subheading": "",
+              "title": "",
+              "text": "<p>We aim to supply a range of high product LiFePO4 cells and accessories to enable our customers to build and maintain their own off-grid power banks.<\/p>",
+              "button_label": "",
+              "button_link": "",
+              "button_style": "primary",
+              "height": "medium",
+              "text_alignment": "center",
+              "enlarge_text": false,
+              "full_width": false,
+              "use_alt_bg": false
+            }
+          },
+          "daa46a74-ea90-46ae-8079-07eaca4104fb": {
+            "type": "image-with-text",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/206ah_Cell_stacked.png",
+              "image_width": 700,
+              "subheading": "",
+              "title": "Cells",
+              "text": "<p>Individual Cells allows you to build your own LiFePO4 power bank to meet your voltage, capacity and current load requirements.  Individual cells also allows you the flexibility to replace a single cell if required instead of being force to replace the whole power bank. <\/p>",
+              "button_label": "View Products",
+              "button_link": "shopify:\/\/collections\/lifepo4-cells",
+              "button_style": "primary",
+              "image_position": "left",
+              "text_alignment": "left",
+              "use_alt_bg": true
+            }
+          },
+          "f5388683-6fd7-4ace-b9f1-ba0f9b86c71a": {
+            "type": "image-with-text",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/IMG_3995.png",
+              "image_width": 700,
+              "subheading": "",
+              "title": "Battery Kits",
+              "text": "<p>Our Battery Kits gives you an all-in-one solution for building your own LiFePO4 power bank.  Our kits come with brand new Grade A cells, Battery Management System (BMS), bus bars, terminal connectors and terminal nuts\/bolts.<\/p>",
+              "button_label": "View Products",
+              "button_link": "shopify:\/\/collections\/lifepo4-battery-kits",
+              "button_style": "primary",
+              "image_position": "right",
+              "text_alignment": "left",
+              "use_alt_bg": false
+            }
+          },
+          "1834ccbc-c69a-4e0a-8842-62fc19019a7f": {
+            "type": "image-with-text",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Deligreen_BMS_-_Transperant.png",
+              "image_width": 700,
+              "subheading": "",
+              "title": "Battery Management System (BMS)",
+              "text": "<p>A Battery Management System (BMS) is critical when connecting LiFePO4 cells in series.  A BMS ensures that the voltage of each cell is kept balanced, while also providing protection again over charging, discharging or current draws.  We supply a range of BMS products for different voltages and current requirements.<\/p>",
+              "button_label": "Read more",
+              "button_link": "shopify:\/\/collections\/battery-management-systems-bms",
+              "button_style": "primary",
+              "image_position": "left",
+              "text_alignment": "left",
+              "use_alt_bg": true
+            }
+          },
+          "bcbd1fea-aa62-441e-a706-ae4833551df7": {
+            "type": "image-with-text",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/40A-DC-DC-Large_png.png",
+              "image_width": 700,
+              "subheading": "",
+              "title": "DC-DC Chargers",
+              "text": "<p>DC-DC chargers allows you to charge your auxiliary battery from an alternator or lead acid charging source.  We have a variety of different DC-DC chargers with different current outputs. <\/p>",
+              "button_label": "Read more",
+              "button_link": "shopify:\/\/collections\/dc-dc-charger",
+              "button_style": "primary",
+              "image_position": "right",
+              "text_alignment": "left",
+              "use_alt_bg": false
+            }
+          }
+        },
+        "block_order": [
+          "bb17529e-3344-4873-bdf3-18418aa6dd62",
+          "e136d41f-5271-4e92-8398-6e7de14d4fcd",
+          "daa46a74-ea90-46ae-8079-07eaca4104fb",
+          "f5388683-6fd7-4ace-b9f1-ba0f9b86c71a",
+          "1834ccbc-c69a-4e0a-8842-62fc19019a7f",
+          "bcbd1fea-aa62-441e-a706-ae4833551df7"
+        ],
+        "settings": {
+          "show_page_content": false
+        }
+      },
+      "1625649197ffb4e246": {
+        "type": "collection-list",
+        "blocks": {
+          "05867a6f-4ba1-4dcb-a4fb-7a6935c38753": {
+            "type": "collection",
+            "settings": {
+              "collection": "battery-management-systems-bms"
+            }
+          }
+        },
+        "block_order": [
+          "05867a6f-4ba1-4dcb-a4fb-7a6935c38753"
+        ],
+        "settings": {
+          "title": "Battery Management Systems (BMS)",
+          "enable_carousel": true,
+          "grid": 4,
+          "use_alt_bg": false,
+          "full_width": true
+        }
+      },
+      "columns-story": {
+        "type": "columns-story",
+        "blocks": {
+          "b7406956-ee78-4b41-8d08-facdb390386b": {
+            "type": "text_block",
+            "settings": {
+              "enable_image": true,
+              "image_width": 700,
+              "title": "QUALITY",
+              "text": "<p>We only deal with manufactures which standby their products with manufacturers warranties.  When sourcing products we first test them ourselves before offering them to our customers.  <\/p>",
+              "button_label": "",
+              "link": ""
+            }
+          },
+          "245c82dc-fef2-4a23-99ba-c3274c9be48c": {
+            "type": "text_block",
+            "settings": {
+              "enable_image": true,
+              "image_width": 700,
+              "title": "EXPERIENCE",
+              "text": "<p>We have worked with and used LiFePO4 cells long before we started offering them to our customers.  We use what we sell and that's how we can provide solutions based on our own experience rather than just sales hype.<\/p>",
+              "button_label": "",
+              "link": ""
+            }
+          },
+          "2fc664a9-5a05-4730-995f-e598d0bc38df": {
+            "type": "text_block",
+            "settings": {
+              "enable_image": true,
+              "image_width": 700,
+              "title": "SERVICE",
+              "text": "<p>Service is a huge factor when purchasing products online.  We pride ourselves on not only providing good service in helping customers choose what's best suited to them, however we aim to provide excellent after sales service.<\/p>",
+              "button_label": "",
+              "link": ""
+            }
+          }
+        },
+        "block_order": [
+          "b7406956-ee78-4b41-8d08-facdb390386b",
+          "245c82dc-fef2-4a23-99ba-c3274c9be48c",
+          "2fc664a9-5a05-4730-995f-e598d0bc38df"
+        ],
+        "settings": {
+          "title": "Text columns with images",
+          "text_alignment": "center",
+          "button_style": "primary",
+          "use_alt_bg": false
+        }
+      }
+    },
+    "content_for_index": [
+      "1478795901388",
+      "1624262768dc7b2b97",
+      "1521035976582",
+      "16238387842cbaa5e0",
+      "1625202026bea97ca3",
+      "1595062506799",
+      "1480591889144",
+      "1625649197ffb4e246",
+      "1595063270897",
+      "1583244060103",
+      "16252019460a9c5c00",
+      "1623997059a664425b",
+      "1595065871135",
+      "1521034575223",
+      "1605867395e9326332",
+      "1595067713114",
+      "1623995833611a41fb",
+      "1624262676d17cd286",
+      "1611656731e8ac3466",
+      "16239107683074d770",
+      "16239121788b852109",
+      "16239956920d57625c",
+      "16239104708aa6e090",
+      "162452139656826702"
+    ]
+  }
+}

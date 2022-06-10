@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="{{ shop.locale }}">
+<head>
+  
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KWCK684VL6"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-KWCK684VL6');
+</script>
+  
+  
+  <!-- Symmetry 4.11.13 -->
+
+  <link rel="preload" href="{{ 'styles.css' | asset_url }}" as="style">
+  {% render 'head-tag' %}
+  <meta name="theme-color" content="{{ settings.btn_col }}">
+
+  <title>
+    {{ page_title }}{% if current_tags %}{% assign meta_tags = current_tags | join: ', ' %} &ndash; {{ 'general.meta.tags' | t: tags: meta_tags }}{% endif %}{% if current_page != 1 %} &ndash; {{ 'general.meta.page' | t: page: current_page }}{% endif %}{% unless page_title contains shop.name %} &ndash; {{ shop.name }}{% endunless %}
+  </title>
+
+  {% render 'social-meta-tags' %}
+
+  {{ 'styles.css' | asset_url | stylesheet_tag }}
+  {{ 'custom.css' | asset_url | stylesheet_tag }}
+
+  <script>
+    window.theme = window.theme || {};
+    theme.money_format = {{ shop.money_format | json }};
+    theme.strings = {
+      previous: {{ 'general.accessibility_labels.previous' | t | json }},
+      next: {{ 'general.accessibility_labels.next' | t | json }},
+      addressError: {{ 'map.errors.address_error' | t | json }},
+      addressNoResults: {{ 'map.errors.address_no_results' | t | json }},
+      addressQueryLimit: {{ 'map.errors.address_query_limit_html' | t | json }},
+      authError: {{ 'map.errors.auth_error' | t | json }},
+      icon_labels_left: {{ 'general.icon_labels.left' | t | escape | json }},
+      icon_labels_right: {{ 'general.icon_labels.right' | t | escape | json }},
+      icon_labels_down: {{ 'general.icon_labels.down' | t | escape | json }},
+      icon_labels_close: {{ 'general.icon_labels.close' | t | escape | json }},
+      icon_labels_plus: {{ 'general.icon_labels.plus' | t | escape | json }},
+      cart_terms_confirmation: {{ 'cart.terms.confirmation' | t | json }},
+      products_listing_from: {{ 'products.listing.from' | t | json }},
+      layout_live_search_see_all: {{ 'layout.live_search.see_all' | t | json }},
+      products_product_add_to_cart: {{ 'products.product.add_to_cart' | t | json }},
+      products_variant_no_stock: {{ 'products.variant.no_stock' | t | json }},
+      products_variant_non_existent: {{ 'products.variant.non_existent' | t | json }},
+      onlyXLeft: {{ 'products.labels.only_x_left' | t: quantity: '[[ quantity ]]' | json }},
+      products_product_unit_price_separator: {{ 'products.product.unit_price_separator' | t | json }},
+      general_navigation_menu_toggle_aria_label: {{ 'general.navigation.menu_toggle_aria_label' | t | json }},
+      products_added_notification_title: {{ 'products.added_notification.title' | t | json }},
+      products_added_notification_item: {{ 'products.added_notification.item' | t | json }},
+      products_added_notification_unit_price: {{ 'products.added_notification.unit_price' | t | json }},
+      products_added_notification_quantity: {{ 'products.added_notification.quantity' | t | json }},
+      products_added_notification_total_price: {{ 'products.added_notification.total_price' | t | json }},
+      products_added_notification_shipping_note: {{ 'products.added_notification.shipping_note' | t | json }},
+      products_added_notification_keep_shopping: {{ 'products.added_notification.keep_shopping' | t | json }},
+      products_added_notification_cart: {{ 'products.added_notification.cart' | t | json }},
+      products_product_adding_to_cart: {{ 'products.product.adding_to_cart' | t | json }},
+      products_product_added_to_cart: {{ 'products.product.added_to_cart' | t | json }},
+      products_added_notification_subtotal: {{ 'products.added_notification.subtotal' | t | json }},
+      products_labels_sold_out: {{ 'products.labels.sold_out' | t | json }},
+      products_labels_sale: {{ 'products.labels.sale' | t | json }},
+      products_labels_percent_reduction: {{ 'products.labels.percent_reduction' | t: amount: '[[ amount ]]' | json }},
+      products_labels_value_reduction_html: {{ 'products.labels.value_reduction_html' | t: amount: '[[ amount ]]' | json }},
+      products_product_preorder: {{ 'products.product.preorder' | t | json }},
+      general_quick_search_pages: {{ 'general.quick_search.pages' | t | json }},
+      general_quick_search_no_results: {{ 'general.quick_search.no_results' | t | json }},
+      collections_general_see_all_subcollections: {{ 'collections.general.see_all_subcollections' | t | json }}
+    };
+    theme.routes = {
+      search_url: '{{ routes.search_url }}',
+      cart_url: '{{ routes.cart_url }}',
+      cart_add_url: '{{ routes.cart_add_url }}',
+      cart_change_url: '{{ routes.cart_change_url }}'
+    };
+    theme.settings = {
+      cart_type: {{ settings.cart_type | json }},
+      quickbuy_style: {{ settings.quickbuy_style | json }},
+      show_size_chart: {{ settings.show_size_chart | json }}
+    };
+    document.documentElement.classList.add('js');
+  </script>
+
+  {{ content_for_header }}
+</head>
+
+<body class="template-{{ template | split: '.' | first }}{% if template.suffix %} template-suffix-{{ template.suffix }}{% endif %}" data-cc-animate-timeout="0">
+
+  {%- if settings.animations_enabled_desktop -%}
+    <script>
+      if ('IntersectionObserver' in window) {
+        document.body.classList.add("cc-animate-enabled");
+      }
+    </script>
+  {%- endif -%}
+
+  <a class="skip-link visually-hidden" href="#content">{{ 'general.accessibility_labels.skip_to_content' | t }}</a>
+
+  {% section 'announcement-bar' %}
+  {% section 'header' %}
+  {% section 'store-messages' %}
+
+  <main id="content" role="main">
+    <div class="container cf">
+
+      {{ content_for_layout }}
+
+    </div><!-- /.container -->
+  </main><!-- /#content -->
+
+  {% if request.path != '/challenge' %}
+    <div id="pagefooter">
+      {% section 'cross-page-promos' %}
+      {% section 'footer' %}
+    </div>
+
+    {% section 'popup' %}
+  {% endif %}
+
+  {{ 'vendor.js'  | asset_url | script_tag }}
+  {{ 'theme.js'  | asset_url | script_tag }}
+  {{ 'custom.js'  | asset_url | script_tag }}
+  <!-- PickyStory snippet "main_widget_script", do not modify. Safe to remove after the app is uninstalled -->
+  {% if content_for_header contains 'pickystory' %}
+    <script defer src="https://cdn.pickystory.com/widget/dist/latest/pickystory-widget.min.js"></script>
+  {% endif %}
+  <!-- PickyStory end snippet "main_widget_script" -->
+</body>
+</html>
+
+
+
+<!-- Begin Shopify-Afterpay JavaScript Snippet (v1.0.12) -->
+<script type="text/javascript">
+// Editable fields (remove "//" from the start of each line to activate):
+var afterpay_min = 0.04;  // As per your Afterpay contract.
+var afterpay_max = 2000.00;  // As per your Afterpay contract.
+
+ var afterpay_product_selector = '.price-container';  // The selector used to identify the price on the Product pages.
+  var afterpay_product_css = {'margin': '15px 0','font-size':'14px'};  // The CSS styling of the Afterpay assets on the Product pages.
+// var afterpay_logo_theme = 'black';  // The Afterpay logo colour. Can be 'colour' (default), 'black' or 'white'.
+// var afterpay_modal_open_icon = true;	 // If enabled, an "ⓘ" icon is displayed next to the Afterpay logo in place of the "More info" text.
+// var afterpay_cbt_enabled = true;  // As per your Afterpay contract. Enable to true to display Cross Border Trade artwork (for AU/NZ).
+
+// var afterpay_variable_price_fallback_selector = '.product-price-selector';  // The selector used to identify the price on the Product pages if the Afterpay assets are disappearing after page-load or price is incorrect when a variant is selected.
+// var afterpay_variable_price_fallback_method = "interval";  // Ensures the instalment price updates when the price changes. Can be "mutation" (default) or "interval".
+
+var afterpay_cart_integration_enabled = true;  // Enables/disables the Cart page display. Can be true or false (default).
+ var afterpay_cart_static_selector = '.subtotal';  // The selector used to identify the price on the Cart page.
+var afterpay_cart_static_css = {'margin': '15px 0'};  // The CSS styling of the Afterpay assets on the Cart page.
+// var afterpay_cart_static_logo_theme = 'black';  // The Afterpay logo colour. Can be 'colour' (default), 'black' or 'white'.
+
+// var afterpay_variable_subtotal_fallback_selector = '.cart-subtotal-selector';  // The selector used to identify the price on the Cart page if the Afterpay assets are disappearing after page-load.
+// var afterpay_variable_subtotal_fallback_method = "interval";  // Ensures the instalment price updates when the price changes. Can be "mutation" (default) or "interval".
+
+var afterpay_footer_logo_enabled = true;  // Enables/disables the footer payment icon. Can be true (default) or false.
+// var afterpay_footer_logo_container = '.payment-icons';  // The selector used to identify the payment icons in the footer.
+// var afterpay_footer_logo_format = 'logo';  // The Afterpay payment icon style. Can be 'icon' (default), 'stacked' or 'logo'.
+// var afterpay_footer_logo_theme = 'black';  // The Afterpay payment icon colour. Can be 'colour' (default), 'black' or 'white'.
+// var afterpay_footer_logo_background = 'transparent';  // The Afterpay payment icon border style. Can be 'border' (default) or 'transparent'.
+// var afterpay_footer_logo_css = {'width': 'auto', 'height': 'auto', 'vertical-align': 'baseline'};  // The CSS styling of the Afterpay payment icon in the footer.
+
+// Non-editable fields:
+var afterpay_shop_currency = {{ shop.currency | json }};
+var afterpay_cart_currency = {{ cart.currency.iso_code | json }};
+var afterpay_shop_money_format = {{ shop.money_format | json }};
+var afterpay_shop_permanent_domain = {{ shop.permanent_domain | json }};
+var afterpay_theme_name = {{ theme.name | json }};
+var afterpay_product = {{ product | json }};
+var afterpay_current_variant = {{ product.selected_or_first_available_variant | json }};
+var afterpay_cart_total_price = {{ cart.total_price | json }};
+var afterpay_js_snippet_version = '1.0.12';
+</script>
+<script type="text/javascript" src="https://static.afterpay.com/shopify-afterpay-javascript.js"></script>
+<!-- End Shopify-Afterpay JavaScript Snippet (v1.0.12) -->
+

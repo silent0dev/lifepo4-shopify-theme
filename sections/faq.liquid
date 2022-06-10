@@ -1,0 +1,158 @@
+<div data-section-type="faq" data-components="accordion">
+  <div class="container fully-spaced-row">
+    <div class="faq-layout">
+      <div class="faq-list">
+        {% if section.settings.title != blank %}
+          <h2 class="faq-title">{{ section.settings.title | escape }}</h2>
+        {% endif %}
+
+        {% if section.settings.subheading != blank %}
+          <div class="rte">{{ section.settings.subheading }}</div>
+        {% endif %}
+
+        {% if section.settings.show_search %}
+          <div class="faq-search">
+            <span class="faq-search__icon">{% render 'svg-search' %}</span>
+            <input type="text" class="faq-search__input" autocomplete="off" placeholder="{{ 'faq.search.placeholder' | t | escape }}" aria-label="{{ 'faq.search.label' | t | escape }}">
+          </div>
+        {% endif %}
+
+        {% capture accordion_content %}
+          {%- for block in section.blocks -%}
+            <div class="faq-row" {{ block.shopify_attributes }}>
+              {% if block.type == 'heading' %}
+                <h3 class="faq-content faq-content--heading" id="faq-{{ block.settings.title | handle }}">{{ block.settings.title }}</h3>
+
+              {% elsif block.type == 'content' %}
+                <div class="faq-content faq-content--text rte">{{ block.settings.content }}</div>
+
+              {% elsif block.type == 'button' %}
+                <div class="faq-content faq-content--button">
+                  <a class="btn btn--primary" href="{{ block.settings.link }}">{{ block.settings.title }}</a>
+                </div>
+
+              {% elsif block.type == 'question' %}
+                <div class="faq-question-container">
+                  {% render 'accordion-item',
+                      title: block.settings.title,
+                      content: block.settings.answer,
+                      add_content_class: 'rte',
+                      item_open: false
+                  %}
+                </div>
+              {% endif %}
+            </div>
+          {%- endfor -%}
+        {% endcapture %}
+        {%
+          render "accordion",
+            allow_multi_open: false,
+            content: accordion_content
+        %}
+      </div>
+    </div>
+  </div>
+</div>
+
+
+{% schema %}
+  {
+    "name": "FAQs",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Heading",
+        "default": "FAQs"
+      },
+      {
+        "type": "text",
+        "id": "subheading",
+        "label": "Subheading"
+      },
+      {
+        "type": "checkbox",
+        "id": "show_search",
+        "label": "Show search",
+        "default": false
+      }
+    ],
+    "max_blocks": 100,
+    "blocks": [
+      {
+        "type": "question",
+        "name": "Question",
+        "settings": [
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Question",
+            "default": "Question"
+          },
+          {
+            "type": "richtext",
+            "id": "answer",
+            "label": "Answer",
+            "default": "<p>Enter your answer here<\/p>"
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "name": "Heading",
+        "settings": [
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Heading",
+            "default": "Heading"
+          }
+        ]
+      },
+      {
+        "type": "content",
+        "name": "Paragraph",
+        "settings": [
+          {
+            "type": "richtext",
+            "id": "content",
+            "label": "Content"
+          }
+        ]
+      },
+      {
+        "type": "button",
+        "name": "Button",
+        "settings": [
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Label",
+            "default": "Button label"
+          },
+          {
+            "type": "url",
+            "id": "link",
+            "label": "Link"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "FAQs",
+        "category": "Text",
+        "settings": {
+        },
+        "blocks": [
+          {
+            "type": "question"
+          },
+          {
+            "type": "question"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}

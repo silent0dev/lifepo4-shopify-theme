@@ -1,0 +1,136 @@
+<div data-section-type="faq" data-components="accordion">
+  <div class="container">
+    <div class="faq-layout">
+      <div class="faq-list">
+        {% if section.settings.title != blank %}
+          <h2 class="faq-title">{{ section.settings.title | escape }}</h2>
+        {% endif %}
+
+        {% if section.settings.subheading != blank %}
+          <div class="rte">{{ section.settings.subheading }}</div>
+        {% endif %}
+
+        {% if section.settings.show_search %}
+          <div class="faq-search">
+            <span class="faq-search__icon">{% render 'svg-search' %}</span>
+            <input type="text" class="faq-search__input" autocomplete="off" placeholder="{{ 'faq.search.placeholder' | t | escape }}" aria-label="{{ 'faq.search.label' | t | escape }}">
+          </div>
+        {% endif %}
+
+        {% capture accordion_content %}
+          {%- for i in(1..6) -%}
+            {% capture question_key %}question_{{ i }}{% endcapture %}
+            {% capture answer_key %}answer_{{ i }}{% endcapture %}
+            {% if section.settings[question_key] != blank %}
+              <div class="faq-row">
+                <div class="faq-question-container">
+                  {% render 'accordion-item',
+                      title: section.settings[question_key],
+                      content: section.settings[answer_key],
+                      add_content_class: 'rte',
+                      item_open: false
+                  %}
+                </div>
+              </div>
+            {% endif %}
+          {%- endfor -%}
+        {% endcapture %}
+        {%
+          render "accordion",
+            allow_multi_open: false,
+            content: accordion_content
+        %}
+      </div>
+    </div>
+  </div>
+</div>
+
+
+{% schema %}
+  {
+    "name": "FAQs",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Heading",
+        "default": "FAQs"
+      },
+      {
+        "type": "text",
+        "id": "subheading",
+        "label": "Subheading"
+      },
+      {
+        "type": "checkbox",
+        "id": "show_search",
+        "label": "Show search",
+        "default": false
+      },
+      {
+        "type": "text",
+        "id": "question_1",
+        "label": "Question 1",
+        "default": "Question 1"
+      },
+      {
+        "type": "richtext",
+        "id": "answer_1",
+        "label": "Answer 1",
+        "default": "<p>Enter your answer here<\/p>"
+      },
+      {
+        "type": "text",
+        "id": "question_2",
+        "label": "Question 2",
+        "default": "Question 2"
+      },
+      {
+        "type": "richtext",
+        "id": "answer_2",
+        "label": "Answer 2",
+        "default": "<p>Enter your answer here<\/p>"
+      },
+      {
+        "type": "text",
+        "id": "question_3",
+        "label": "Question 3"
+      },
+      {
+        "type": "richtext",
+        "id": "answer_3",
+        "label": "Answer 3"
+      },
+      {
+        "type": "text",
+        "id": "question_4",
+        "label": "Question 4"
+      },
+      {
+        "type": "richtext",
+        "id": "answer_4",
+        "label": "Answer 4"
+      },
+      {
+        "type": "text",
+        "id": "question_5",
+        "label": "Question 5"
+      },
+      {
+        "type": "richtext",
+        "id": "answer_5",
+        "label": "Answer 5"
+      },
+      {
+        "type": "text",
+        "id": "question_6",
+        "label": "Question 6"
+      },
+      {
+        "type": "richtext",
+        "id": "answer_6",
+        "label": "Answer 6"
+      }
+    ]
+  }
+{% endschema %}

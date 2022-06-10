@@ -1,0 +1,13 @@
+{% section 'product-template' %}
+{% section 'product-story' %}
+{% section 'product-recommendations' %}
+
+<script>
+  theme.strings.products_product_add_to_cart = {{ 'products.product.preorder' | t | json }};
+</script>
+
+<script type="application/json" id="ProductJson-{{ product.id }}">
+  {{ product | json }}
+</script>
+
+{% render 'structured-data-product', product: product, current_variant: product.selected_or_first_available_variant %}

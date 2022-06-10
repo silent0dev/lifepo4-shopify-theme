@@ -1,0 +1,845 @@
+<div data-section-id="{{ section.id }}" data-section-type="collection-template" data-ajax-filtering="{{ section.settings.ajax_products }}" data-cc-animate>
+{% paginate collection.products by section.settings.coll_num_per_page_int %}
+
+{%- liquid
+  if section.settings.show_image_behind_heading and collection.image
+    assign header_image_enabled = true
+  else
+    assign header_image_enabled = false
+  endif
+-%}
+
+{%- liquid
+  if section.settings.subcoll_menu != blank
+    assign current_link_parent = false
+    for link in linklists[section.settings.subcoll_menu].links
+      if link.links != empty
+        if link.type == 'collection_link' and link.object.handle == collection.handle
+          assign current_link_parent = link
+          break
+        elsif link.type == 'catalog_link' and collection.handle == 'all'
+          assign current_link_parent = link
+          break
+        endif
+      endif
+      if link.links != blank and current_link_parent == false
+        for child_link in link.links
+          if child_link.type == 'collection_link' and child_link.object.handle == collection.handle
+            if child_link.links == empty
+              assign current_link_parent = link
+            else
+              assign current_link_parent = child_link
+            endif
+            break
+          endif
+          if child_link.type == 'catalog_link' and collection.handle == 'all'
+            if child_link.links == empty
+              assign current_link_parent = link
+            else
+              assign current_link_parent = child_link
+            endif
+            break
+          endif
+          if child_link.links != blank and current_link_parent == false
+            for child_child_link in child_link.links
+              if child_child_link.type == 'collection_link' and child_child_link.object.handle == collection.handle
+                assign current_link_parent = child_link
+                break
+              elsif child_child_link.type == 'catalog_link' and collection.handle == 'all'
+                assign current_link_parent = child_link
+                break
+              endif
+            endfor
+          endif
+        endfor
+      endif
+    endfor
+  endif
+-%}
+
+{%- if current_link_parent -%}
+  {%- assign subcoll_count = 0 -%}
+  {% capture subcollection_html %}
+    {% if section.settings.subcoll_style == 'buttons' %}
+      <div class="container">
+        <div class="subcollection-links subcollection-links--buttons align-center lightly-spaced-row-above{% if header_image_enabled %} image-overlay__over{% endif %}">
+          {%- for link in current_link_parent.links -%}
+            {%- unless link.object.handle == collection.handle or link.type != 'collection_link' -%}
+              {%- assign subcoll_count = subcoll_count | plus: 1 -%}
+              <a class="btn btn--tertiary" href="{{ link.url }}">{{ link.title | escape }}</a>
+            {%- endunless -%}
+          {%- endfor -%}
+        </div>
+      </div>
+    {% else %}
+      {% unless section.settings.subcoll_gall_full_width %}
+        <div class="container container--not-mobile lightly-spaced-row-above lightly-spaced-row-above--not-mobile">
+      {% endunless %}
+      <div class="subcollection-links subcollection-links--gallery {% if section.settings.subcoll_gall_full_width %}subcollection-links--is-full-width{% endif %} {% if section.settings.subcoll_gall_mobile_layout == 'hide' %}desktop-only{% endif %} {% if header_image_enabled %}subcollection-links--under-image-header{% endif %}">
+        <div class="gallery slick-slider-overlay-dots {% if section.settings.subcoll_gall_enable_margin %} gallery--with-margins{% endif %}{% if section.settings.subcoll_gall_full_width and section.settings.subcoll_gall_enable_margin %} gallery--with-vertical-outer-padding{% endif %}"
+            data-mobile-item-count="{{ section.settings.subcoll_gall_mobile_layout }}">
+          {%- for link in current_link_parent.links -%}
+            {%- unless link.object.handle == collection.handle or link.type != 'collection_link' -%}
+              {%- assign subcoll_count = subcoll_count | plus: 1 -%}
+              <div class="gallery__item
+                  gallery__item--shape-fixed
+                  gallery__item--shape-{{ section.settings.subcoll_gall_shape }}
+                  gallery__item-{{ forloop.index }}
+                  image-overlay
+                  image-overlay--bg-{{ section.settings.subcoll_gall_overlay_style }}
+                  image-overlay--edge-boxes
+                  lazyload--placeholder
+                  {% unless section.settings.subcoll_gall_full_width and section.settings.subcoll_gall_enable_margin == false %}image-overlay--edge-boxes--pad-to-corner{% endunless %}
+                  ">
+                <a class="image-overlay__image-link" href="{{ link.url }}">
+                  {%- liquid
+                    if link.object.image
+                      assign subcoll_image = link.object.image
+                    else if collection.products.first.featured_media
+                      assign subcoll_image = collection.products.first.featured_media.preview_image
+                    else
+                      assign subcoll_image = false
+                    endif
+                  -%}
+                  {%- if subcoll_image -%}
+                    <div class="gallery__image rimage-outer-wrapper rimage-background lazyload--manual fade-in"
+                        data-bgset="{% render 'bgset', image: subcoll_image %}"
+                        data-sizes="auto"
+                        data-parent-fit="cover"
+                        style="background-position: {{ section.settings.image_position }}">
+                      <noscript>
+                        <div class="rimage-wrapper" style="padding-top:{{ 1 | divided_by: subcoll_image.aspect_ratio | times: 100 }}%">
+                          <img src="{{ subcoll_image | img_url: '512x512' }}" alt="{{ subcoll_image.alt | escape }}" class="rimage__image">
+                        </div>
+                      </noscript>
+                    </div>
+                  {%- else -%}
+                    <div class="gallery__image placeholder-image dark">
+                      {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+                    </div>
+                  {%- endif -%}
+
+                  <div class="overlay-text overlay--v-{{ section.settings.subcoll_gall_text_alignment | split: ' ' | first }} overlay--h-{{ section.settings.subcoll_gall_text_alignment | split: ' ' | last }} image-overlay__over">
+                    <div class="overlay-text__inner">
+                      <div class="overlay-text__text">
+                        <h2 class="overlay-text__title h4-style">{{ link.title }}</h2>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            {%- endunless -%}
+          {%- endfor -%}
+        </div>
+      </div>
+      {% unless section.settings.subcoll_gall_full_width %}
+        </div>
+      {% endunless %}
+    {% endif %}
+  {% endcapture %}
+  {%- liquid
+    if subcoll_count < 2
+      assign subcollection_html = ''
+    endif
+  -%}
+{%- endif -%}
+
+{% if header_image_enabled %}
+  <div class="page-header page-header--with-background page-header--background-desktop-only image-overlay image-overlay--bg-full page-header--padded-{{ section.settings.heading_image_height }} rimage-wrapper">
+    <div class="rimage-background lazyload fade-in"
+      data-bgset="{% render 'bgset', image: collection.image %}"
+      data-sizes="auto"
+      data-parent-fit="cover"></div>
+{% else %}
+  {{ subcollection_html }}
+  <div class="page-header page-header--with-upper-spacing">
+{% endif %}
+
+  {% if header_image_enabled %}
+    <div class="page-header-background-mobile-only image-overlay image-overlay--bg-full page-header--padded-{{ section.settings.heading_image_height }} rimage-wrapper">
+      <div class="rimage-background lazyload fade-in"
+        data-bgset="{% render 'bgset', image: collection.image %}"
+        data-sizes="auto"
+        data-parent-fit="cover"></div>
+  {% endif %}
+
+    <div class="container">
+      <h1 class="pagetitle {% if header_image_enabled %}image-overlay__over super-large-text{% else %}h3-style{% endif %}">{{ collection.title | escape }}</h1>
+
+      {% if collection.description != blank and section.settings.coll_desc_pos == 'above' %}
+        <div class="rte cf align-center reading-width {% if header_image_enabled %}image-overlay__over large-text{% endif %}">{{ collection.description }}</div>
+      {% endif %}
+    </div>
+
+    {%- if current_link_parent and header_image_enabled and section.settings.subcoll_style == 'buttons' -%}
+      {{ subcollection_html }}
+    {%- endif -%}
+
+  {% if header_image_enabled %}
+    </div>
+  {% endif %}
+  </div>
+
+  {%- if current_link_parent and header_image_enabled and section.settings.subcoll_style != 'buttons' -%}
+    {{ subcollection_html }}
+  {%- endif -%}
+
+  <div class="container{% if settings.use_fullwidth_layout %} container--no-max{% endif %}">
+    {% comment %} Which tags should we show, and group them into categories {% endcomment %}
+    {%- liquid
+      assign populated_filter_exists = false
+      assign filter_html = ''
+      assign all_block_tags = ''
+    -%}
+
+    {%- if section.settings.tag_filtering == 'tag_groups' -%}
+      {%- for block in section.blocks -%}
+        {%- liquid
+          if settings.swatch_enabled and settings.swatch_option_name == block.settings.title
+            assign filter_group_is_swatch = true
+          else
+            assign filter_group_is_swatch = false
+          endif
+          assign all_block_tags = all_block_tags | append: block.settings.tags
+          assign tag_list = block.settings.tags | newline_to_br | strip_newlines | split: '<br />'
+          assign block_contains_tags = false
+        -%}
+        {%- capture block_filter_html -%}
+          <div class="filter-group{% if filter_group_is_swatch %} filter-group--swatch{% endif %}">
+            <a href="#" class="filter-group__heading{% if block.settings.collapse %} toggle-target-toggler--is-hidden{% endif %}" data-toggle-target=".filter-group--{{ forloop.index | plus: 1 }}">
+              <div class="filter-group__heading__text">{{ block.settings.title | escape }}</div>
+              <span class="filter-group__heading__indicator">{% render 'svg-chevron-down', stroke_width: 1.3 %}</span>
+            </a>
+            <div class="filter-group__items filter-group--{{ forloop.index | plus: 1 }} toggle-target{% if block.settings.collapse %} toggle-target--hidden{% endif %}">
+              <div class="toggle-target-container">
+                {%- for tag in tag_list -%}
+                  {%- liquid
+                    assign lc_tag = tag | downcase
+                    assign tag_is_in_collection = false
+                    for c_tag in collection.all_tags
+                      assign lc_c_tag = c_tag | downcase
+                      if lc_c_tag == lc_tag
+                        assign tag_is_in_collection = true
+                      endif
+                    endfor
+                  -%}
+                  {%- if tag_is_in_collection -%}
+                    {%- liquid
+                      assign populated_filter_exists = true
+                      assign block_contains_tags = true
+                      assign tag_is_in_current_tags = false
+                      for c_tag in current_tags
+                        assign lc_c_tag = c_tag | downcase
+                        if lc_c_tag == lc_tag
+                          assign tag_is_in_current_tags = true
+                        endif
+                      endfor
+                    -%}
+                    {%- if tag_is_in_current_tags -%}
+                      <a class="filter-group__item filter-group__item--active"
+                        href="{{ tag | link_to_remove_tag: tag | split: 'href="' | last | split: '"' | first }}"
+                        data-tag="{{ tag | handle }}">
+                        {% if filter_group_is_swatch %}<span class="filter-group__item__swatch{% if settings.swatch_images %} lazyload{% endif %}" {% if settings.swatch_images %}data-bgset="{{ tag | handle | append: '.png' | file_img_url: '48x48', crop: 'center' }}"{% else %}style="background-color:{{ tag | downcase | remove: ' ' | escape }}"{% endif %}></span>{% endif %}
+                        <span class="filter-group__item__text">{{ tag }}</span>
+                      </a>
+                    {%- else -%}
+                      <a class="filter-group__item"
+                        href="{{ tag | link_to_add_tag: tag | split: 'href="' | last | split: '"' | first }}"
+                        data-tag="{{ tag | handle }}">
+                        {% if filter_group_is_swatch %}<span class="filter-group__item__swatch{% if settings.swatch_images %} lazyload{% endif %}" {% if settings.swatch_images %}data-bgset="{{ tag | handle | append: '.png' | file_img_url: '48x48', crop: 'center' }}"{% else %}style="background-color:{{ tag | downcase | remove: ' ' | escape }}"{% endif %}></span>{% endif %}
+                        <span class="filter-group__item__text">{{ tag }}</span>
+                      </a>
+                    {%- endif -%}
+                  {%- endif -%}
+                {%- endfor -%}
+              </div>
+            </div>
+          </div>
+        {%- endcapture -%}
+        {%- liquid
+          if block_contains_tags
+            assign filter_html = filter_html | append: block_filter_html
+          endif
+        -%}
+      {%- endfor -%}
+    {%- endif -%}
+
+    {%- if section.settings.tag_filtering == 'simple' -%}
+      {%- capture block_filter_html -%}
+        {%- assign block_contains_tags = false -%}
+        <div class="filter-group">
+          <div class="filter-group__items filter-group--1 toggle-target">
+            <div class="toggle-target-container">
+              {%- for tag in collection.all_tags -%}
+                {%- liquid
+                  assign populated_filter_exists = true
+                  assign block_contains_tags = true
+                  assign lc_tag = tag | downcase
+                  assign tag_is_in_current_tags = false
+                  for c_tag in current_tags
+                    assign lc_c_tag = c_tag | downcase
+                    if lc_c_tag == lc_tag
+                      assign tag_is_in_current_tags = true
+                    endif
+                  endfor
+                -%}
+                {%- if tag_is_in_current_tags -%}
+                  <a class="filter-group__item filter-group__item--active" href="{{ tag | link_to_remove_tag: tag | split: 'href="' | last | split: '"' | first }}" data-tag="{{ tag | handle }}"><span class="filter-group__item__text">{{ tag }}</span></a>
+                {%- else -%}
+                  <a class="filter-group__item" href="{{ tag | link_to_add_tag: tag | split: 'href="' | last | split: '"' | first }}" data-tag="{{ tag | handle }}"><span class="filter-group__item__text">{{ tag }}</span></a>
+                {%- endif -%}
+              {%- endfor -%}
+            </div>
+          </div>
+        </div>
+      {%- endcapture -%}
+      {%- liquid
+        if block_contains_tags
+          assign filter_html = filter_html | append: block_filter_html
+        endif
+      -%}
+    {%- endif -%}
+
+    <div class="utility-bar" data-ajax-container data-ajax-scroll-to>
+      <div class="utility-bar__left">
+        {% if populated_filter_exists %}
+          <a href="#" class="toggle-btn utility-bar__item{% if section.settings.collapse_tag_sidebar_by_default == false or current_tags %} toggle-btn--revealed-desktop{% endif %}" data-toggle-filters>
+            <span class="button-icon">{% render 'svg-filter' %}</span>
+            <span>{{ 'collections.filtering.filter' | t }}</span>
+            <span class="toggle-btn__chevron">{% render 'svg-chevron-right', stroke_width: 1.3 %}</span>
+          </a>
+        {% endif %}
+      </div>
+
+      {% if section.settings.show_total and paginate.items > 0 %}
+        <div class="utility-bar__centre">{{ 'collections.general.product_count' | t: count: paginate.items }}</div>
+      {% endif %}
+
+      <div class="utility-bar__right">
+        {% if section.settings.coll_show_sort %}
+          <span class="utility-bar__item{% if populated_filter_exists %} desktop-only{% endif %}">
+            <div class="link-dropdown link-dropdown--right-aligned">
+              {%- assign current_sort = collection.sort_by | default: collection.default_sort_by -%}
+              <div class="visually-hidden" id="sort-dropdown-heading">{{ 'collections.sorting.title' | t | escape }}</div>
+              <button class="link-dropdown__button notabutton" aria-expanded="false" aria-controls="sort-dropdown-options" aria-describedby="sort-dropdown-heading">
+                <span class="link-dropdown__button-text">
+                  {% if collection.default_sort_by == collection.sort_by %}
+                    {{ 'collections.sorting.title' | t | escape }}
+                  {% else %}
+                    {{ current_sort | replace: '-', '_' | prepend: 'collections.sorting.' | t }}
+                  {% endif %}
+                </span>
+                <span class="link-dropdown__button-icon">{% render 'svg-chevron-down', stroke_width: 1.3 %}</span>
+              </button>
+              <div class="link-dropdown__options" id="sort-dropdown-options">
+                <a href="{{ request.path | sort_by: 'price-ascending' | escape }}" class="link-dropdown__link{% if current_sort == 'price-ascending' %} link-dropdown__link--active{% endif %}">{{ 'collections.sorting.price_ascending' | t }}</a>
+                <a href="{{ request.path | sort_by: 'price-descending' | escape }}" class="link-dropdown__link{% if current_sort == 'price-descending' %} link-dropdown__link--active{% endif %}">{{ 'collections.sorting.price_descending' | t }}</a>
+                <a href="{{ request.path | sort_by: 'title-ascending' | escape }}" class="link-dropdown__link{% if current_sort == 'title-ascending' %} link-dropdown__link--active{% endif %}">{{ 'collections.sorting.title_ascending' | t }}</a>
+                <a href="{{ request.path | sort_by: 'title-descending' | escape }}" class="link-dropdown__link{% if current_sort == 'title-descending' %} link-dropdown__link--active{% endif %}">{{ 'collections.sorting.title_descending' | t }}</a>
+                <a href="{{ request.path | sort_by: 'created-ascending' | escape }}" class="link-dropdown__link{% if current_sort == 'created-ascending' %} link-dropdown__link--active{% endif %}">{{ 'collections.sorting.created_ascending' | t }}</a>
+                <a href="{{ request.path | sort_by: 'created-descending' | escape }}" class="link-dropdown__link{% if current_sort == 'created-descending' %} link-dropdown__link--active{% endif %}">{{ 'collections.sorting.created_descending' | t }}</a>
+                <a href="{{ request.path | sort_by: 'best-selling' | escape }}" class="link-dropdown__link{% if current_sort == 'best-selling' %} link-dropdown__link--active{% endif %}">{{ 'collections.sorting.best_selling' | t }}</a>
+                {% if section.settings.coll_show_feat or collection.default_sort_by == 'manual' %}
+                  <a href="{{ request.path | sort_by: 'manual' | escape }}" class="link-dropdown__link{% if current_sort == 'manual' %} link-dropdown__link--active{% endif %}">{{ 'collections.sorting.manual' | t }}</a>
+                {% endif %}
+              </div>
+            </div>
+          </span>
+        {% endif %}
+        <span class="utility-bar__item mobile-only">
+          <div class="layout-switchers">
+            <a class="layout-switch layout-switch--two-columns layout-switch--active" href="#">{%- render 'svg-grid', stroke_width: 1.3 -%}</a>
+            <a class="layout-switch layout-switch--one-column" href="#">{%- render 'svg-box', stroke_width: 1.3 -%}</a>
+          </div>
+        </span>
+      </div>
+    </div>
+
+    <div class="filter-container filter-container--side{% if section.settings.collapse_tag_sidebar_by_default == false or current_tags %} filter-container--show-filters-desktop{% endif %}" data-ajax-container>
+      {% if populated_filter_exists %}
+        <a class="filter-shade" href="#" data-toggle-filters></a>
+        <div class="filters">
+          <div class="filters__inner">
+            <div class="filters__heading">
+              <h4 class="filters__heading-text">{{ 'collections.filtering.heading' | t }}</h4>
+              <a class="filters__close" href="#" data-toggle-filters>{% render 'svg-x', stroke_width: 1.3 %}</a>
+            </div>
+
+            {% if current_tags %}
+              <div class="filter-group filter-group--applied">
+                <div class="filter-group__heading">
+                  <div class="filter-group__heading__text">{{ 'collections.filtering.applied_filters' | t }}</div>
+                </div>
+                <div class="filter-group__items">
+                  {%- for tag in current_tags -%}
+                    <a class="filter-group__applied-item" href="{{ tag | link_to_remove_tag: tag | split: 'href="' | last | split: '"' | first }}" data-tag="{{ tag | escape }}">
+                      <span class="filter-group__applied-item__text">{{ tag }}</span>
+                      <span class="filter-group__applied-item__icon">{% render 'svg-x', stroke_width: 1.3 %}</span>
+                    </a>
+                  {%- endfor -%}
+                  <div class="filter-group__clear-row">
+                    <a class="filter-group__clear-link" href="{{ collection.url }}">{{ 'collections.filtering.clear_all' | t }}</a>
+                  </div>
+                </div>
+              </div>
+            {% endif %}
+
+            {{ filter_html }}
+
+            {% if section.settings.coll_show_sort %}
+              <div class="filter-group mobile-only">
+                <a href="#" class="filter-group__heading" data-toggle-target=".filter-group--sort">
+                  <div class="filter-group__heading__text">{{ 'collections.sorting.title' | t }}</div>
+                  <span class="filter-group__heading__indicator">{% render 'svg-chevron-down', stroke_width: 1.3 %}</span>
+                </a>
+                <div class="filter-group__items filter-group--sort toggle-target">
+                  <div class="toggle-target-container">
+                    {%- assign current_sort = collection.sort_by | default: collection.default_sort_by -%}
+                    <a href="{{ request.path | sort_by: 'price-ascending' | escape }}" class="filter-group__item{% if current_sort == 'price-ascending' %} filter-group__item--active{% endif %}">{{ 'collections.sorting.price_ascending' | t }}</a>
+                    <a href="{{ request.path | sort_by: 'price-descending' | escape }}" class="filter-group__item{% if current_sort == 'price-descending' %} filter-group__item--active{% endif %}">{{ 'collections.sorting.price_descending' | t }}</a>
+                    <a href="{{ request.path | sort_by: 'title-ascending' | escape }}" class="filter-group__item{% if current_sort == 'title-ascending' %} filter-group__item--active{% endif %}">{{ 'collections.sorting.az' | t }}</a>
+                    <a href="{{ request.path | sort_by: 'title-descending' | escape }}" class="filter-group__item{% if current_sort == 'title-descending' %} filter-group__item--active{% endif %}">{{ 'collections.sorting.za' | t }}</a>
+                    <a href="{{ request.path | sort_by: 'created-ascending' | escape }}" class="filter-group__item{% if current_sort == 'created-ascending' %} filter-group__item--active{% endif %}">{{ 'collections.sorting.date_ascending' | t }}</a>
+                    <a href="{{ request.path | sort_by: 'created-descending' | escape }}" class="filter-group__item{% if current_sort == 'created-descending' %} filter-group__item--active{% endif %}">{{ 'collections.sorting.date_descending' | t }}</a>
+                    <a href="{{ request.path | sort_by: 'best-selling' | escape }}" class="filter-group__item{% if current_sort == 'best-selling' %} filter-group__item--active{% endif %}">{{ 'collections.sorting.best_selling' | t }}</a>
+                    {% if section.settings.coll_show_feat or collection.default_sort_by == 'manual' %}
+                      <a href="{{ request.path | sort_by: 'manual' | escape }}" class="filter-group__item{% if current_sort == 'manual' %} filter-group__item--active{% endif %}">{{ 'collections.sorting.featured' | t }}</a>
+                    {% endif %}
+                  </select>
+                  </div>
+                </div>
+              </div>
+            {% endif %}
+          </div>
+        </div>
+      {% endif %}
+
+      <div class="filters-adjacent collection-listing">
+        {% if collection.products.size == 0 %}
+          <h5 class="align-centre fully-spaced-row">{{ 'collections.general.no_matches' | t }}</h5>
+        {% else %}
+          <div class="product-list product-list--per-row-{{ section.settings.grid }} product-list--image-shape-{{ settings.prod_thumb_shape }}">
+            {%- liquid
+              if settings.prod_thumb_shape == 'portrait-23'
+                assign chosen_aspect_ratio = 0.67
+              elsif settings.prod_thumb_shape == 'portrait-45'
+                assign chosen_aspect_ratio = 0.8
+              elsif settings.prod_thumb_shape == 'square'
+                assign chosen_aspect_ratio = 1.0
+              elsif settings.prod_thumb_shape == 'landscape'
+                assign chosen_aspect_ratio = 1.50
+              elsif settings.prod_thumb_shape == 'tallest'
+                assign chosen_aspect_ratio = 99
+                for product in collection.products
+                  if product.featured_media.preview_image.aspect_ratio < chosen_aspect_ratio
+                    assign chosen_aspect_ratio = product.featured_media.preview_image.aspect_ratio
+                  endif
+                endfor
+              else
+                assign chosen_aspect_ratio = 0
+                for product in collection.products
+                  if product.featured_media.preview_image.aspect_ratio > chosen_aspect_ratio
+                    assign chosen_aspect_ratio = product.featured_media.preview_image.aspect_ratio
+                  endif
+                endfor
+              endif
+
+              if current_tags and filter_group_1_is_swatch
+                assign manual_image_load = true
+              else
+                assign manual_image_load = false
+              endif
+            -%}
+            {% for product in collection.products %}
+              {% render 'product-block', product: product, custom_aspect_ratio: chosen_aspect_ratio, manual_image_load: manual_image_load, animate: true %}
+            {% endfor %}
+          </div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+
+  <div class="container pagination-row" data-ajax-container>{% render 'pagination-control', paginate: paginate %}</div>
+
+  {% endpaginate %}
+
+  {% if collection.description != blank and section.settings.coll_desc_pos == 'below' %}
+    <div class="container container--reading-width fully-spaced-row" data-cc-animate>
+      <div class="rte cf">{{ collection.description }}</div>
+    </div>
+  {% endif %}
+</div>
+
+
+{% schema %}
+  {
+    "name": "Collection pages",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Heading"
+      },
+      {
+        "type": "checkbox",
+        "id": "show_image_behind_heading",
+        "label": "Show collection image behind heading",
+        "default": false
+      },
+      {
+        "type": "select",
+        "id": "heading_image_height",
+        "label": "Heading image height",
+        "options": [
+          {
+            "value": "small",
+            "label": "Compact"
+          },
+          {
+            "value": "medium",
+            "label": "Small"
+          },
+          {
+            "value": "large",
+            "label": "Medium"
+          },
+          {
+            "value": "huge",
+            "label": "Large"
+          }
+        ],
+        "default": "medium"
+      },
+      {
+        "type": "header",
+        "content": "Layout"
+      },
+      {
+        "type": "range",
+        "id": "coll_num_per_page_int",
+        "min": 16,
+        "max": 50,
+        "step": 2,
+        "label": "Number of products to show per page",
+        "default": 24
+      },
+      {
+        "type": "range",
+        "id": "grid",
+        "label": "Products per row",
+        "min": 2,
+        "max": 5,
+        "step": 1,
+        "default": 4
+      },
+      {
+        "type": "checkbox",
+        "id": "show_vendor",
+        "label": "Show product vendors",
+        "default": false
+      },
+      {
+        "type": "checkbox",
+        "id": "show_total",
+        "label": "Show product total",
+        "default": true
+      },
+      {
+        "type": "select",
+        "id": "coll_desc_pos",
+        "label": "Description position",
+        "default": "above",
+        "options": [
+          {
+            "value": "above",
+            "label": "Below collection title"
+          },
+          {
+            "value": "below",
+            "label": "Below products"
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "content": "Filters"
+      },
+      {
+        "type": "checkbox",
+        "id": "ajax_products",
+        "label": "Filter and sort collections without loading a new page",
+        "default": true,
+        "info": "Some apps require this to be disabled"
+      },
+      {
+        "type": "checkbox",
+        "id": "coll_show_sort",
+        "label": "Show sorting dropdown",
+        "default": true
+      },
+      {
+        "type": "checkbox",
+        "id": "coll_show_feat",
+        "label": "Show 'Featured' in sorting dropdown",
+        "default": false
+      },
+      {
+        "type": "radio",
+        "id": "tag_filtering",
+        "label": "Tag filtering",
+        "default": "simple",
+        "options": [
+          {
+            "value": "none",
+            "label": "None"
+          },
+          {
+            "value": "simple",
+            "label": "Simple"
+          },
+          {
+            "value": "tag_groups",
+            "label": "Tag groups"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": "Tag groups let you create custom filters for your collections [Learn more](https:\/\/cleancanvas.co.uk\/support\/general\/tag-groups)"
+      },
+      {
+        "type": "checkbox",
+        "id": "collapse_tag_sidebar_by_default",
+        "label": "Collapse filter column",
+        "default": false
+      },
+      {
+        "type": "header",
+        "content": "Subcollections",
+        "info": "Select your main menu to enable this feature."
+      },
+      {
+        "type": "paragraph",
+        "content": "If the current collection is in (or has) a dropdown menu, other collections in that dropdown menu will show. [Read more](https://cleancanvas.co.uk/support/symmetry/subcollections)"
+      },
+      {
+        "type": "link_list",
+        "id": "subcoll_menu",
+        "label": "Subcollections menu",
+        "default": "main-menu"
+      },
+      {
+        "type": "select",
+        "id": "subcoll_style",
+        "label": "Subcollections style",
+        "default": "buttons",
+        "options": [
+          {
+            "value": "buttons",
+            "label": "Buttons"
+          },
+          {
+            "value": "gallery",
+            "label": "Gallery"
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "content": "Subcollection gallery"
+      },
+      {
+        "type": "select",
+        "id": "subcoll_gall_shape",
+        "label": "Image shape",
+        "default": "sq",
+        "options": [
+          {
+            "value": "l-21",
+            "label": "Landscape (2x1)"
+          },
+          {
+            "value": "l-64",
+            "label": "Landscape (6x4)"
+          },
+          {
+            "value": "l-5x4",
+            "label": "Landscape (5x4)"
+          },
+          {
+            "value": "sq",
+            "label": "Square (1x1)"
+          },
+          {
+            "value": "p-4x5",
+            "label": "Portrait (4x5)"
+          }
+        ]
+      },
+      {
+        "type": "select",
+        "id": "image_position",
+        "label": "Image alignment",
+        "info": "Used to keep the subject of your image in view",
+        "default": "center center",
+        "options": [
+          {
+            "value": "top left",
+            "label": "Top left"
+          },
+          {
+            "value": "top center",
+            "label": "Top center"
+          },
+          {
+            "value": "top right",
+            "label": "Top right"
+          },
+          {
+            "value": "center left",
+            "label": "Middle left"
+          },
+          {
+            "value": "center center",
+            "label": "Middle center"
+          },
+          {
+            "value": "center right",
+            "label": "Middle right"
+          },
+          {
+            "value": "bottom left",
+            "label": "Bottom left"
+          },
+          {
+            "value": "bottom center",
+            "label": "Bottom center"
+          },
+          {
+            "value": "bottom right",
+            "label": "Bottom right"
+          }
+        ]
+      },
+      {
+        "id": "subcoll_gall_enable_margin",
+        "type": "checkbox",
+        "label": "Add spacing",
+        "default": true
+      },
+      {
+        "id": "subcoll_gall_full_width",
+        "type": "checkbox",
+        "label": "Full page width",
+        "default": false
+      },
+      {
+        "id": "subcoll_gall_overlay_style",
+        "type": "select",
+        "label": "Overlay style",
+        "default": "full",
+        "options": [
+          {
+            "value": "full",
+            "label": "Tint"
+          },
+          {
+            "value": "box",
+            "label": "Box"
+          },
+          {
+            "value": "no_background",
+            "label": "No background"
+          }
+        ]
+      },
+      {
+        "type": "select",
+        "id": "subcoll_gall_text_alignment",
+        "label": "Text alignment",
+        "options": [
+          {
+            "value": "top left",
+            "label": "Top left"
+          },
+          {
+            "value": "top center",
+            "label": "Top center"
+          },
+          {
+            "value": "top right",
+            "label": "Top right"
+          },
+          {
+            "value": "center center",
+            "label": "Middle"
+          },
+          {
+            "value": "bottom left",
+            "label": "Bottom left"
+          },
+          {
+            "value": "bottom center",
+            "label": "Bottom center"
+          },
+          {
+            "value": "bottom right",
+            "label": "Bottom right"
+          }
+        ],
+        "default": "center center"
+      },
+      {
+        "type": "select",
+        "id": "subcoll_gall_mobile_layout",
+        "label": "Mobile layout",
+        "info": "Mobile layout is always full width, without spacing, with 5x4 images",
+        "default": "2",
+        "options": [
+          {
+            "value": "1",
+            "label": "1 item"
+          },
+          {
+            "value": "2",
+            "label": "2 items"
+          },
+          {
+            "value": "hide",
+            "label": "Hide"
+          }
+        ]
+      }
+    ],
+    "blocks": [
+      {
+        "type": "tag-group",
+        "name": "Tag group",
+        "settings": [
+          {
+            "type": "checkbox",
+            "id": "show",
+            "label": "Show",
+            "default": true
+          },
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Heading"
+          },
+          {
+            "type": "textarea",
+            "id": "tags",
+            "label": "Tag list",
+            "info": "One tag per line"
+          },
+          {
+            "type": "checkbox",
+            "id": "collapse",
+            "label": "Collapse",
+            "default": false
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}

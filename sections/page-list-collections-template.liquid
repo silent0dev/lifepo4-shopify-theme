@@ -1,0 +1,83 @@
+<div data-section-type="page-list-collections-template">
+  <div class="container">
+    <div class="page-header cf" data-cc-animate>
+      <h1 class="majortitle">
+        {{ page.title }}
+      </h1>
+
+      {% if page.content != blank %}
+      <div class="rte lightly-spaced-row">
+        {{ page.content }}
+      </div>
+      {% endif %}
+    </div>
+  </div>
+
+
+  <div class="container{% if settings.use_fullwidth_layout %} container--no-max{% endif %}">
+    <div class="collection-listing overlay-mode-{{ section.settings.overlay_mode }}">
+      <div class="product-list product-list--per-row-{{ section.settings.grid }} product-list--image-shape-{{ settings.coll_grid_image_shape }}">
+        {%- liquid
+          if settings.coll_grid_image_shape == 'portrait-23'
+            assign chosen_aspect_ratio = 0.67
+          elsif settings.coll_grid_image_shape == 'portrait-45'
+            assign chosen_aspect_ratio = 0.8
+          elsif settings.coll_grid_image_shape == 'square'
+            assign chosen_aspect_ratio = 1.0
+          elsif settings.coll_grid_image_shape == 'landscape'
+            assign chosen_aspect_ratio = 1.50
+          elsif settings.coll_grid_image_shape == 'tallest'
+            assign chosen_aspect_ratio = 99
+            for link in linklists[page.handle].links
+              if link.type == 'collection_link'
+              assign collection = link.object
+              if collection != blank
+                assign collection_image = collection.image | default: collection.products.first.featured_media.preview_image
+                  if collection_image.aspect_ratio < chosen_aspect_ratio
+                    assign chosen_aspect_ratio = collection_image.aspect_ratio
+                  endif
+                endif
+              endif
+            endfor
+          else
+            assign chosen_aspect_ratio = 0
+            for link in linklists[page.handle].links
+              if link.type == 'collection_link'
+              assign collection = link.object
+              if collection != blank
+                assign collection_image = collection.image | default: collection.products.first.featured_media.preview_image
+                  if collection_image.aspect_ratio > chosen_aspect_ratio
+                    assign chosen_aspect_ratio = collection_image.aspect_ratio
+                  endif
+                endif
+              endif
+            endfor
+          endif
+        -%}
+        {% for link in linklists[page.handle].links %}
+          {% if link.type == 'collection_link' %}
+            {% render 'collection-block', collection: link.object, custom_aspect_ratio: chosen_aspect_ratio, animate: true %}
+          {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
+
+
+{% schema %}
+  {
+    "name": "Collection lists",
+    "settings": [
+      {
+        "type": "range",
+        "id": "grid",
+        "label": "Collections per row",
+        "min": 2,
+        "max": 5,
+        "step": 1,
+        "default": 4
+      }
+    ]
+  }
+{% endschema %}

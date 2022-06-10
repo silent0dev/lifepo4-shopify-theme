@@ -1,0 +1,9 @@
+{% section 'product-template' %}
+{% section 'product-story' %}
+{% section 'product-recommendations' %}
+
+<script type="application/json" id="ProductJson-{{ product.id }}">
+  {{ product | json }}
+</script>
+
+{% render 'structured-data-product', product: product, current_variant: product.selected_or_first_available_variant %}
